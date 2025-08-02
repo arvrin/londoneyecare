@@ -85,7 +85,8 @@ export function Header() {
                 onMouseEnter={() => item.dropdown && setActiveDropdown(item.name)}
                 onMouseLeave={(e) => {
                   // Only close if not hovering over the dropdown area
-                  if (!item.dropdown || !e.relatedTarget?.closest('[data-dropdown="true"]')) {
+                  const relatedTarget = e.relatedTarget as HTMLElement | null;
+                  if (!item.dropdown || !relatedTarget?.closest('[data-dropdown="true"]')) {
                     setActiveDropdown(null);
                   }
                 }}
