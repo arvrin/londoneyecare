@@ -49,7 +49,7 @@ export default function HomePage() {
                   
                   {/* Description with better flow */}
                   <p className="text-lg text-muted leading-relaxed">
-                    Experience premium eye care in London's prestigious medical district with cutting-edge technology and personalized service.
+                    Experience premium eye care in London&apos;s prestigious medical district with cutting-edge technology and personalized service.
                   </p>
                 </div>
               </div>
@@ -389,7 +389,7 @@ export default function HomePage() {
                 
                 <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                   Enjoy exclusive access to our prestigious lounge. Connect, recharge, and relax 
-                  in luxury while you wait in London's premier medical district.
+                  in luxury while you wait in London&apos;s premier medical district.
                 </p>
                 
                 {/* Premium Features */}
@@ -470,7 +470,7 @@ export default function HomePage() {
             </h2>
             
             <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Experience exceptional eye care and luxury eyewear services in London's 
+              Experience exceptional eye care and luxury eyewear services in London&apos;s 
               prestigious medical district.
             </p>
             

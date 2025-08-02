@@ -125,7 +125,7 @@ export default function ContactForm() {
             </div>
             <h2 className="text-h3 mb-4">Booking Request Received</h2>
             <p className="text-secondary mb-6">
-              Thank you for your appointment request. We'll contact you within 24 hours to confirm your booking.
+              Thank you for your appointment request. We&apos;ll contact you within 24 hours to confirm your booking.
             </p>
             <button 
               onClick={() => {
@@ -162,7 +162,7 @@ export default function ContactForm() {
           </h1>
           <p className="text-lead max-w-3xl mx-auto">
             Ready to experience premium eye care? Get in touch with our team or book your appointment online. 
-            We're here to help with all your vision needs.
+            We&apos;re here to help with all your vision needs.
           </p>
         </div>
       </section>

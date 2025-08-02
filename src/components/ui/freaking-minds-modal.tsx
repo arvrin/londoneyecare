@@ -92,7 +92,7 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
                     <svg className="w-5 h-5 mr-2 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
-                    What You're Experiencing
+                    What You&apos;re Experiencing
                   </h3>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start">

@@ -54,7 +54,7 @@ export default function FreakingMindsPage() {
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p>
-                  The London Eyecare Collective website you're experiencing right now is a 
+                  The London Eyecare Collective website you&apos;re experiencing right now is a 
                   demonstration of our premium web development capabilities. Every element, 
                   from the sophisticated design system to the smooth animations, represents 
                   the level of quality we bring to our clients.
@@ -69,7 +69,7 @@ export default function FreakingMindsPage() {
             
             <div className="space-y-6">
               <div className="bg-pink-50 rounded-2xl p-6 border border-pink-100">
-                <h3 className="text-xl font-semibold text-pink-600 mb-3">What You're Experiencing</h3>
+                <h3 className="text-xl font-semibold text-pink-600 mb-3">What You&apos;re Experiencing</h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start">
                     <svg className="w-4 h-4 mr-2 mt-1 flex-shrink-0 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
@@ -139,7 +139,7 @@ export default function FreakingMindsPage() {
             Ready to Transform Your Digital Presence?
           </h2>
           <p className="text-xl text-pink-100 mb-8">
-            Let's discuss how we can create something extraordinary for your brand.
+            Let&apos;s discuss how we can create something extraordinary for your brand.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 

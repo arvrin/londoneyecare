@@ -281,7 +281,7 @@ export default function AboutPage() {
                 Prime Harley Street Location
               </h2>
               <p className="text-body text-secondary mb-6">
-                Our prestigious clinic is located in the heart of London's medical district, 
+                Our prestigious clinic is located in the heart of London&apos;s medical district, 
                 offering easy access and exclusive amenities for our patients.
               </p>
               

@@ -215,7 +215,7 @@ export default function BrandsPage() {
             Luxury Eyewear Brands
           </h1>
           <p className="text-lead max-w-3xl mx-auto">
-            Discover our curated collection of the world's most prestigious eyewear brands. 
+            Discover our curated collection of the world&apos;s most prestigious eyewear brands. 
             From timeless classics to cutting-edge innovation, find frames that reflect your unique style and sophistication.
           </p>
         </div>
@@ -378,7 +378,7 @@ export default function BrandsPage() {
                 The Luxury Eyewear Experience
               </h2>
               <p className="text-body text-secondary mb-6">
-                At London Eyecare Collective, selecting luxury eyewear is more than a transaction—it's a 
+                At London Eyecare Collective, selecting luxury eyewear is more than a transaction—it&apos;s a 
                 personalized journey to find frames that perfectly express your individual style and meet your vision needs.
               </p>
               
