@@ -4,7 +4,19 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Logo, LogoMark } from '@/components/ui/logo';
 
-const navigation = [
+interface DropdownItem {
+  name: string;
+  href: string;
+  icon?: string;
+}
+
+interface NavigationItem {
+  name: string;
+  href: string;
+  dropdown?: DropdownItem[];
+}
+
+const navigation: NavigationItem[] = [
   { name: 'Home', href: '/' },
   { 
     name: 'About', 
@@ -136,8 +148,8 @@ export function Header() {
                             style={{ animationDelay: `${index * 50}ms` }}
                           >
                             <div className="flex items-center relative z-10">
-                              {(dropdownItem as any).icon && (
-                                <span className="mr-3 text-base">{(dropdownItem as any).icon}</span>
+                              {dropdownItem.icon && (
+                                <span className="mr-3 text-base">{dropdownItem.icon}</span>
                               )}
                               <span>{dropdownItem.name}</span>
                             </div>

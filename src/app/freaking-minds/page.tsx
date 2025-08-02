@@ -3,13 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Metadata } from 'next';
-
-// Metadata would be exported in a separate file for client components
-// export const metadata: Metadata = {
-//   title: 'Freaking Minds - Premium Digital Experiences | London Eyecare',
-//   description: 'Meet the creative minds behind this premium digital transformation. Expert web development, design, and digital strategy.',
-// };
 
 export default function FreakingMindsPage() {
   const [activeSection, setActiveSection] = useState('hero');
