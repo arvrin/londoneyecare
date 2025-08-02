@@ -440,60 +440,69 @@ export default function HomePage() {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-brand-navy via-brand-navy-light to-brand-navy relative overflow-hidden">
-        {/* Simplified background pattern */}
+      <section className="py-20 lg:py-32 relative overflow-hidden" style={{
+        background: 'linear-gradient(135deg, #1B365D 0%, #2A4A73 50%, #1B365D 100%)'
+      }}>
+        {/* Enhanced background pattern */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-[0.08]" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(184,134,11,0.2) 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
+          <div className="absolute inset-0 opacity-20" style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(184,134,11,0.6) 2px, transparent 0)`,
+            backgroundSize: '32px 32px'
           }}></div>
           
-          <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent"></div>
+          {/* Additional overlay for depth */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+          
+          {/* Subtle animated glow effect */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-gold rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-brand-gold rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+          </div>
         </div>
         
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             {/* Location Badge */}
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-gold text-sm font-medium mb-6">
-              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-brand-gold/25 backdrop-blur-sm border border-brand-gold/50 text-brand-gold text-sm font-semibold mb-8 shadow-lg">
+              <svg className="w-5 h-5 mr-3 text-brand-gold drop-shadow-sm" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
               </svg>
               22 A Harley Street, London W1G 9BP
             </div>
             
             {/* Main Headline */}
-            <h2 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6 leading-tight">
+            <h2 className="text-4xl lg:text-6xl font-display font-bold text-white mb-8 leading-tight drop-shadow-lg">
               Ready to Experience
-              <span className="block text-brand-gold font-extrabold">
+              <span className="block text-brand-gold font-extrabold drop-shadow-md">
                 Premium Eye Care?
               </span>
             </h2>
             
-            <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-200 mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-sm">
               Experience exceptional eye care and luxury eyewear services in London&apos;s 
               prestigious medical district.
             </p>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
               <Link 
                 href="/contact" 
-                className="btn-luxury px-10 py-4 text-lg"
+                className="btn-luxury px-12 py-5 text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
               >
-                <span className="flex items-center justify-center">
+                <span className="flex items-center justify-center font-semibold">
                   Book Your Consultation
-                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 </span>
               </Link>
               
               <Link 
-                href="tel:+442012345678" 
-                className="px-10 py-4 text-lg bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 rounded-full transition-colors"
+                href="tel:+44790333277" 
+                className="px-12 py-5 text-lg bg-white/10 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/20 hover:border-white/60 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
-                <span className="flex items-center justify-center">
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className="flex items-center justify-center font-semibold">
+                  <svg className="w-5 h-5 mr-3 drop-shadow-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   +44 790-333-2774
@@ -502,36 +511,45 @@ export default function HomePage() {
             </div>
             
             {/* Contact Information */}
-            <div className="grid sm:grid-cols-3 gap-6 lg:gap-8 max-w-3xl mx-auto">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            <div className="grid sm:grid-cols-3 gap-8 lg:gap-12 max-w-4xl mx-auto">
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-white/15 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-gold/20 group-hover:border-brand-gold/40 transition-all duration-300 shadow-lg">
+                  <svg className="w-6 h-6 text-white drop-shadow-sm group-hover:text-brand-gold transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <h3 className="text-sm font-semibold text-white mb-1 uppercase tracking-wide">Visit Us</h3>
-                <p className="text-slate-200 text-sm">22 A Harley Street<br/>London W1G 9BP</p>
+                <h3 className="text-sm font-bold text-white mb-2 uppercase tracking-wider drop-shadow-sm">Visit Us</h3>
+                <p className="text-slate-200 text-sm leading-relaxed drop-shadow-sm">
+                  22 A Harley Street<br/>
+                  <span className="text-slate-300">London W1G 9BP</span>
+                </p>
               </div>
               
-              <div className="text-center">
-                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-white/15 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-gold/20 group-hover:border-brand-gold/40 transition-all duration-300 shadow-lg">
+                  <svg className="w-6 h-6 text-white drop-shadow-sm group-hover:text-brand-gold transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-sm font-semibold text-white mb-1 uppercase tracking-wide">Hours</h3>
-                <p className="text-slate-200 text-sm">Mon-Fri: 9AM-6PM<br/>Sat: 9AM-4PM</p>
+                <h3 className="text-sm font-bold text-white mb-2 uppercase tracking-wider drop-shadow-sm">Hours</h3>
+                <p className="text-slate-200 text-sm leading-relaxed drop-shadow-sm">
+                  Mon-Sat: 10:00 am – 06:30 pm<br/>
+                  <span className="text-slate-300">Sunday: Closed</span>
+                </p>
               </div>
               
-              <div className="text-center">
-                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              <div className="text-center group">
+                <div className="w-16 h-16 bg-white/15 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-gold/20 group-hover:border-brand-gold/40 transition-all duration-300 shadow-lg">
+                  <svg className="w-6 h-6 text-white drop-shadow-sm group-hover:text-brand-gold transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <h3 className="text-sm font-semibold text-white mb-1 uppercase tracking-wide">Call</h3>
-                <p className="text-slate-200 text-sm">+44 790-333-2774<br/>info@londoneyecare.co.uk</p>
+                <h3 className="text-sm font-bold text-white mb-2 uppercase tracking-wider drop-shadow-sm">Call</h3>
+                <p className="text-slate-200 text-sm leading-relaxed drop-shadow-sm">
+                  +44 790-333-2774<br/>
+                  <span className="text-slate-300">info@londoneyecare.co.uk</span>
+                </p>
               </div>
             </div>
           </div>
