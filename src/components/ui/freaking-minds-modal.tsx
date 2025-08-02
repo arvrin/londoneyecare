@@ -171,6 +171,7 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
               </div>
             </div>
           </div>
+        </div>
       </div>
     </div>
   );
