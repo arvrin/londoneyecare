@@ -44,155 +44,133 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
       {/* Modal */}
       <div className="relative z-10 flex items-center justify-center min-h-screen p-4">
         <div className={`
-          relative w-full max-w-2xl bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl border border-pink-200
+          relative w-full max-w-2xl backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden
           transition-all duration-300 transform
           ${isVisible ? 'scale-100 translate-y-0' : 'scale-95 translate-y-4'}
-        `}>
+        `} style={{
+          background: 'linear-gradient(135deg, #1B365D 0%, #E91E63 15%, #1B365D 85%, #B8860B 100%)'
+        }}>
           {/* Close Button */}
           <button
             onClick={handleClose}
-            className="absolute top-6 right-6 w-10 h-10 rounded-full bg-pink-100 hover:bg-pink-200 transition-colors flex items-center justify-center group"
+            className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-colors flex items-center justify-center group border border-white/30"
           >
-            <svg className="w-5 h-5 text-pink-600 group-hover:text-pink-700 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-white group-hover:text-brand-gold transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
           {/* Content */}
-          <div className="p-8 lg:p-12">
-            {/* Header */}
-            <div className="text-center mb-8">
-              <div className="flex flex-col items-center justify-center mb-4">
-                <Image
-                  src="/FM logo.png"
-                  alt="Freaking Minds"
-                  width={200}
-                  height={80}
-                  className="object-contain mb-3"
-                  priority
-                />
-                <h2 className="text-2xl lg:text-3xl font-display font-bold text-gray-900">
-                  Hello from Freaking Minds
-                </h2>
-              </div>
-              
-              <div className="w-24 h-1 bg-pink-500 mx-auto mb-6 rounded-full"></div>
-              
-              <p className="text-xl text-gray-600 leading-relaxed">
-                This is what your brand could look like digitally
-              </p>
-            </div>
-
-            {/* Main Content */}
-            <div className="space-y-6 mb-8">
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* Left Column */}
-                <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-gray-900 flex items-center">
-                    <svg className="w-5 h-5 mr-2 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    What You&apos;re Experiencing
-                  </h3>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex items-start">
-                      <svg className="w-4 h-4 mr-2 mt-1 flex-shrink-0 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
-                      </svg>
-                      <span>Premium design system with dual themes</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-4 h-4 mr-2 mt-1 flex-shrink-0 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
-                      </svg>
-                      <span>Modern animations & micro-interactions</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-4 h-4 mr-2 mt-1 flex-shrink-0 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
-                      </svg>
-                      <span>Responsive across all devices</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-4 h-4 mr-2 mt-1 flex-shrink-0 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
-                      </svg>
-                      <span>Professional brand integration</span>
-                    </li>
-                  </ul>
+          <div className="relative">
+            {/* Background overlay for content readability */}
+            <div className="absolute inset-0 bg-white/95 backdrop-blur-sm rounded-3xl"></div>
+            
+            <div className="relative p-8 lg:p-12">
+              {/* Header */}
+              <div className="text-center mb-8">
+                <div className="flex flex-col items-center justify-center mb-6">
+                  <Image
+                    src="/FM logo.png"
+                    alt="Freaking Minds"
+                    width={180}
+                    height={70}
+                    className="object-contain mb-4"
+                    priority
+                  />
+                  <h2 className="text-3xl lg:text-4xl font-display font-bold text-brand-navy mb-4">
+                    Welcome to the Freaking Minds Experience
+                  </h2>
                 </div>
+                
+                <div className="w-32 h-1 bg-gradient-to-r from-pink-500 via-brand-gold to-brand-navy mx-auto mb-6 rounded-full"></div>
+                
+                <div className="text-lg text-slate-700 leading-relaxed space-y-4 max-w-2xl mx-auto">
+                  <p>
+                    Everything you see here — the flow, the feel, the finesse — is built with one goal: <span className="font-semibold text-brand-navy">a better digital experience for you</span>.
+                  </p>
+                  <p>
+                    Designed to help you <span className="font-semibold text-pink-600">see clearer</span>, <span className="font-semibold text-brand-gold">move faster</span>, and <span className="font-semibold text-brand-navy">feel at ease</span> — just like London Eyecare&apos;s promise.
+                  </p>
+                </div>
+              </div>
 
-                {/* Right Column */}
-                <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-gray-900 flex items-center">
-                    <svg className="w-5 h-5 mr-2 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
-                    </svg>
-                    Our Capabilities
-                  </h3>
-                  <ul className="space-y-2 text-gray-600">
-                    <li className="flex items-start">
-                      <svg className="w-4 h-4 mr-2 mt-1 flex-shrink-0 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+              {/* Experience Highlights */}
+              <div className="bg-gradient-to-r from-slate-50 via-pink-50/30 to-blue-50/30 rounded-2xl p-6 border border-slate-200">
+                <div className="grid md:grid-cols-3 gap-6 text-center">
+                  <div className="space-y-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                       </svg>
-                      <span>Custom web applications</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-4 h-4 mr-2 mt-1 flex-shrink-0 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                    </div>
+                    <h4 className="font-semibold text-brand-navy">See Clearer</h4>
+                    <p className="text-sm text-slate-600">Intuitive design that guides your vision</p>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-brand-gold to-yellow-500 rounded-xl flex items-center justify-center mx-auto">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
-                      <span>E-commerce platforms</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-4 h-4 mr-2 mt-1 flex-shrink-0 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                    </div>
+                    <h4 className="font-semibold text-brand-navy">Move Faster</h4>
+                    <p className="text-sm text-slate-600">Seamless interactions at lightning speed</p>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-brand-navy to-blue-600 rounded-xl flex items-center justify-center mx-auto">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                       </svg>
-                      <span>Brand identity & design systems</span>
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-4 h-4 mr-2 mt-1 flex-shrink-0 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
-                      </svg>
-                      <span>Performance optimization</span>
-                    </li>
-                  </ul>
+                    </div>
+                    <h4 className="font-semibold text-brand-navy">Feel at Ease</h4>
+                    <p className="text-sm text-slate-600">Comfortable, premium experience</p>
+                  </div>
                 </div>
               </div>
 
               {/* CTA Section */}
-              <div className="bg-pink-50 rounded-2xl p-6 text-center border border-pink-100">
-                <h4 className="text-lg font-semibold text-pink-600 mb-2">
-                  Ready to transform your digital presence?
-                </h4>
-                <p className="text-gray-600 mb-4">
-                  Explore this demo and see how we can elevate your brand
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center">
                   <button
                     onClick={handleClose}
-                    className="bg-pink-500 text-white hover:bg-pink-600 font-semibold px-6 py-3 text-sm rounded-full transition-all duration-300"
+                    className="group relative overflow-hidden"
                   >
-                    Continue Exploring
+                    <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-brand-gold to-brand-navy rounded-full opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="relative bg-white rounded-full m-0.5 px-8 py-4 group-hover:bg-transparent transition-all duration-300">
+                      <span className="font-semibold text-brand-navy group-hover:text-white transition-colors duration-300 flex items-center">
+                        Experience the Difference
+                        <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </span>
+                    </div>
                   </button>
-                  <a
-                    href="mailto:hello@freakingminds.com"
-                    className="bg-transparent border-2 border-pink-500 text-pink-600 hover:bg-pink-500 hover:text-white font-semibold px-6 py-3 text-sm rounded-full transition-all duration-300"
-                  >
-                    Get In Touch
-                  </a>
                 </div>
+                
+                <p className="text-sm text-slate-500 mt-4">
+                  Continue exploring this premium experience
+                </p>
+              </div>
+
+              {/* Footer */}
+              <div className="text-center pt-6 border-t border-slate-200">
+                <p className="text-sm text-slate-500 mb-3">
+                  A showcase of premium web development by Freaking Minds
+                </p>
+                <a
+                  href="mailto:hello@freakingminds.com"
+                  className="inline-flex items-center text-sm font-medium text-pink-600 hover:text-brand-navy transition-colors"
+                >
+                  Get in touch
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
               </div>
             </div>
-
-            {/* Footer */}
-            <div className="text-center">
-              <p className="text-sm text-gray-500">
-                This website showcases our premium web development capabilities
-              </p>
-            </div>
           </div>
-        </div>
       </div>
     </div>
   );

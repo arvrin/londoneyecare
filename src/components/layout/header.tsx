@@ -17,7 +17,16 @@ const navigation = [
       { name: 'Contact', href: '/contact' },
     ]
   },
-  { name: 'Freaking Minds', href: '/freaking-minds' },
+  { 
+    name: 'Freaking Minds', 
+    href: '/freaking-minds',
+    dropdown: [
+      { name: 'Design: Then vs Now', href: '/freaking-minds#before-after', icon: '🔄' },
+      { name: 'Meet Freaking Minds', href: '/freaking-minds#about', icon: '👥' },
+      { name: 'Transparent Pricing', href: '/freaking-minds#pricing', icon: '💰' },
+      { name: 'Why Partner With Us', href: '/freaking-minds#partnership', icon: '🤝' },
+    ]
+  },
 ];
 
 export function Header() {
@@ -119,11 +128,24 @@ export function Header() {
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="group/dropdown block px-4 py-3 text-sm text-gray-700 hover:text-brand-navy hover:bg-gray-50 transition-all duration-300 relative overflow-hidden"
+                            className={`group/dropdown block px-4 py-3 text-sm transition-all duration-300 relative overflow-hidden ${
+                              item.name === 'Freaking Minds' 
+                                ? 'text-gray-700 hover:text-pink-600 hover:bg-pink-50' 
+                                : 'text-gray-700 hover:text-brand-navy hover:bg-gray-50'
+                            }`}
                             style={{ animationDelay: `${index * 50}ms` }}
                           >
-                            <span className="relative z-10">{dropdownItem.name}</span>
-                            <div className="absolute left-0 top-1/2 w-0 h-0.5 bg-gradient-to-r from-brand-gold to-brand-navy group-hover/dropdown:w-full transition-all duration-300 transform -translate-y-1/2"></div>
+                            <div className="flex items-center relative z-10">
+                              {(dropdownItem as any).icon && (
+                                <span className="mr-3 text-base">{(dropdownItem as any).icon}</span>
+                              )}
+                              <span>{dropdownItem.name}</span>
+                            </div>
+                            <div className={`absolute left-0 top-1/2 w-0 h-0.5 group-hover/dropdown:w-full transition-all duration-300 transform -translate-y-1/2 ${
+                              item.name === 'Freaking Minds'
+                                ? 'bg-gradient-to-r from-pink-500 to-purple-600'
+                                : 'bg-gradient-to-r from-brand-gold to-brand-navy'
+                            }`}></div>
                           </Link>
                         ))}
                       </div>
