@@ -510,60 +510,87 @@ export default function FreakingMindsPage() {
               Transparent Pricing
             </div>
             <h2 className="text-4xl lg:text-6xl font-display font-bold text-[#525151] mb-6">
-              No vague packages.
+              Strategic Partnership
               <span className="block bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] bg-clip-text text-transparent font-extrabold">
-                No hidden fees.
+                Pricing
               </span>
             </h2>
-            <p className="text-xl text-[#757373] max-w-3xl mx-auto leading-relaxed">
-              Just clear deliverables that align with your growth goals. Choose what you need, when you need it.
+            <p className="text-xl text-[#757373] max-w-3xl mx-auto leading-relaxed mb-8">
+              London-quality execution at global market rates. Strategic partnerships shouldn&apos;t be limited by geography.
             </p>
+            
+            {/* Market Positioning Statement */}
+            <div className="bg-gradient-to-r from-[#E0D8DB]/20 to-[#D2B7C2]/10 rounded-2xl p-6 max-w-4xl mx-auto mb-12 border border-[#D2B7C2]/20">
+              <p className="text-lg text-[#525151] text-center font-medium">
+                <span className="text-[#8F184C] font-semibold">Typical UK Agency Rates:</span> £200-400/hour • 
+                <span className="text-[#8F184C] font-semibold">Our Strategic Rates:</span> £45-85/hour • 
+                <span className="text-emerald-600 font-semibold">Your Investment Efficiency:</span> 60-75% better ROI
+              </p>
+            </div>
           </div>
           
-          {/* Pricing Cards */}
+          {/* Strategic Partnership Services */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {[
               {
-                service: 'SEO Overhaul',
-                summary: 'Get found where it matters',
-                details: 'Complete SEO strategy, on-page optimization, technical setup, and monthly reporting',
-                price: 'from £300',
-                popular: false
+                service: 'SEO Foundation & Strategy',
+                summary: 'Dominate London search results',
+                details: 'Technical SEO audit, local SEO optimization, keyword strategy, competitor analysis, monthly reporting',
+                ukPrice: '£1,200-2,500',
+                ourPrice: '£450-750',
+                monthlyPrice: '/month',
+                popular: true,
+                savings: 'Save 60-70%'
               },
               {
-                service: 'Google Ads Setup',
-                summary: 'Ads that actually convert',
-                details: 'Account setup, keyword research, ad copy creation, landing page optimization',
-                price: 'from £250',
-                popular: true
+                service: 'Digital Marketing Suite',
+                summary: 'Complete online presence management',
+                details: 'Google Ads management, social media strategy, content marketing, email campaigns, conversion optimization',
+                ukPrice: '£2,000-4,000',
+                ourPrice: '£800-1,500',
+                monthlyPrice: '/month',
+                popular: true,
+                savings: 'Save 60-65%'
               },
               {
-                service: 'Hosting & Care Plan',
-                summary: 'Keep your site secure & smooth',
-                details: 'Premium hosting, security updates, backups, performance monitoring, support',
-                price: 'from £50/mo',
-                popular: false
+                service: 'Brand & Web Development',
+                summary: 'Premium digital experiences',
+                details: 'Custom website design, brand identity, logo design, premium hosting, maintenance & support',
+                ukPrice: '£8,000-15,000',
+                ourPrice: '£3,000-6,000',
+                monthlyPrice: 'project',
+                popular: false,
+                savings: 'Save 60-70%'
               },
               {
-                service: 'Blog Content',
-                summary: 'Build trust and SEO together',
-                details: 'Expert-written articles, SEO optimization, industry expertise, 2 posts per month',
-                price: '£100/mo',
-                popular: false
+                service: 'Social Media Management',
+                summary: 'Build trust & patient relationships',
+                details: 'Content creation, posting schedule, community engagement, Instagram/Facebook management, growth strategy',
+                ukPrice: '£800-1,500',
+                ourPrice: '£300-600',
+                monthlyPrice: '/month',
+                popular: false,
+                savings: 'Save 60-65%'
               },
               {
-                service: 'Lead Funnel Setup',
-                summary: 'Turn visitors into real bookings',
-                details: 'Form optimization, CRM integration, automated follow-ups, conversion tracking',
-                price: 'from £150',
-                popular: false
+                service: 'E-commerce & Booking Systems',
+                summary: 'Convert visitors to appointments',
+                details: 'Online booking integration, payment systems, CRM setup, automated workflows, conversion tracking',
+                ukPrice: '£3,000-6,000',
+                ourPrice: '£1,200-2,500',
+                monthlyPrice: 'project',
+                popular: false,
+                savings: 'Save 60-65%'
               },
               {
-                service: 'Full Website Redesign',
-                summary: 'Complete transformation',
-                details: 'Custom design, development, SEO setup, mobile optimization, premium experience',
-                price: 'from £2000',
-                popular: true
+                service: 'Complete Partnership Package',
+                summary: 'Your full digital team in India',
+                details: 'SEO, digital marketing, web development, social media, content creation, monthly strategy calls',
+                ukPrice: '£5,000-10,000',
+                ourPrice: '£2,000-4,000',
+                monthlyPrice: '/month',
+                popular: true,
+                savings: 'Save 60-70%'
               }
             ].map((item, index) => (
               <div key={index} className={`group relative ${item.popular ? 'md:col-span-2 xl:col-span-1' : ''}`}>
@@ -575,10 +602,15 @@ export default function FreakingMindsPage() {
                   {item.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Partnership Focus
                       </div>
                     </div>
                   )}
+                  
+                  {/* Savings Badge */}
+                  <div className="absolute -top-2 -right-2 bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                    {item.savings}
+                  </div>
                   
                   <div className="text-center">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{item.service}</h3>
@@ -588,19 +620,25 @@ export default function FreakingMindsPage() {
                       <p className="text-sm text-gray-700 leading-relaxed">{item.details}</p>
                     </div>
                     
-                    <div className="text-2xl font-bold bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] bg-clip-text text-transparent mb-6">
-                      {item.price}
+                    {/* UK vs Our Pricing */}
+                    <div className="space-y-3 mb-6">
+                      <div className="text-sm text-gray-500">
+                        <span className="line-through">UK Agencies: {item.ukPrice}</span>
+                      </div>
+                      <div className="text-2xl font-bold bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] bg-clip-text text-transparent">
+                        {item.ourPrice}<span className="text-sm text-gray-600">{item.monthlyPrice}</span>
+                      </div>
                     </div>
                     
                     <Link 
                       href="mailto:hello@freakingminds.com"
-                      className={`w-full py-3 px-6 rounded-full font-semibold transition-all duration-300 ${
+                      className={`w-full py-3 px-6 rounded-full font-semibold transition-all duration-300 block text-center ${
                         item.popular
                           ? 'bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] text-white hover:from-[#CA226B] hover:to-[#DBC5CE] shadow-lg hover:shadow-xl'
                           : 'bg-[#E0D8DB]/30 text-[#8F184C] hover:bg-[#D2B7C2]/30 border border-[#D2B7C2]/50'
                       }`}
                     >
-                      Get Started
+                      Start Partnership
                     </Link>
                   </div>
                 </div>
@@ -608,16 +646,33 @@ export default function FreakingMindsPage() {
             ))}
           </div>
 
-          {/* Bundle CTA */}
-          <div className="mt-16 bg-gradient-to-r from-[#E0D8DB]/30 to-[#D2B7C2]/20 rounded-3xl p-8 text-center border border-[#D2B7C2]/30">
-            <h3 className="text-2xl font-bold text-[#525151] mb-4">Need help choosing the right mix?</h3>
-            <p className="text-[#757373] mb-6">We&apos;ll create a custom bundle that fits your specific goals and budget.</p>
-            <Link 
-              href="mailto:hello@freakingminds.com"
-              className="bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] text-white hover:from-[#CA226B] hover:to-[#DBC5CE] px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              Let&apos;s Build Your Bundle
-            </Link>
+          {/* Strategic Partnership CTA */}
+          <div className="mt-16 bg-gradient-to-r from-[#E0D8DB]/30 to-[#D2B7C2]/20 rounded-3xl p-10 text-center border border-[#D2B7C2]/30">
+            <div className="max-w-3xl mx-auto">
+              <h3 className="text-2xl font-bold text-[#525151] mb-4">Let&apos;s discuss your growth goals and budget</h3>
+              <p className="text-[#757373] mb-6 text-lg leading-relaxed">
+                These are our strategic partnership rates. We&apos;d love to understand your specific needs and create a custom plan that delivers maximum ROI for your investment.
+              </p>
+              <div className="bg-white/60 rounded-xl p-6 mb-8 border border-[#D2B7C2]/20">
+                <p className="text-[#525151] font-medium text-center italic">
+                  &quot;Quality partnerships aren&apos;t about finding the cheapest option — they&apos;re about finding the right strategic fit for long-term growth.&quot;
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="mailto:hello@freakingminds.com"
+                  className="bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] text-white hover:from-[#CA226B] hover:to-[#DBC5CE] px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                >
+                  Discuss Partnership
+                </Link>
+                <Link 
+                  href="tel:+918800000000"
+                  className="bg-white/80 text-[#8F184C] hover:bg-white border-2 border-[#D2B7C2]/50 px-8 py-4 font-semibold rounded-full transition-all duration-300"
+                >
+                  Schedule Strategy Call
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -633,40 +688,47 @@ export default function FreakingMindsPage() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#E0D8DB]/30 border border-[#D2B7C2]/50 text-[#8F184C] text-sm font-medium mb-6">
               <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63c-.34-.81-1.08-1.37-1.96-1.37h-6c-.88 0-1.62.56-1.96 1.37L7.5 16H10v6h10zM8.5 12.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S10.83 11 10 11s-1.5.67-1.5 1.5z"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                <circle cx="12" cy="12" r="5"/>
+                <circle cx="12" cy="12" r="3" fill="white" opacity="0.8"/>
+                <circle cx="12" cy="12" r="1"/>
               </svg>
-              A Personal Message
+              India → UK Strategic Partnership
             </div>
             <h2 className="text-4xl lg:text-6xl font-display font-bold text-[#525151] mb-8">
-              Why Partner
+              Why Choose a
               <span className="block bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] bg-clip-text text-transparent font-extrabold">
-                With Us
+                Global Partnership
               </span>
             </h2>
           </div>
 
-          {/* Personal Letter */}
+          {/* Strategic Partnership Letter */}
           <div className="bg-white rounded-3xl p-12 shadow-xl border border-gray-100 mb-12">
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-[#525151] leading-relaxed mb-6">
-                <strong>Dear London Eyecare,</strong>
+                <strong>Dear London Eyecare Team,</strong>
               </p>
               
               <p className="text-lg text-[#757373] leading-relaxed mb-6">
-                You&apos;re not just another clinic — you&apos;re a name on Harley Street. That means something.
+                You reached out for SEO services. Instead, we delivered a complete digital transformation — because that&apos;s how strategic partnerships begin.
               </p>
               
               <p className="text-lg text-[#757373] leading-relaxed mb-6">
-                And we believe your digital presence should feel as premium as your care.
+                You&apos;re evaluating agencies across London, paying £200-400/hour for similar expertise. We offer the same caliber of work at strategic global rates (£45-85/hour) without compromising on quality.
+              </p>
+              
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                <strong>Why India?</strong> Because talent isn&apos;t geographically limited. Our team delivers London-agency quality with the efficiency of global market pricing. You get premium results with 60-70% better ROI.
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                We didn&apos;t pitch randomly. We studied your old site, mapped your gaps, and rebuilt it the way we wish every medical brand&apos;s site worked.
+                This website redesign isn&apos;t just our portfolio piece — it&apos;s your proof that strategic partnerships transcend borders.
               </p>
               
               <div className="bg-[#E0D8DB]/30 rounded-2xl p-6 border border-[#D2B7C2]/30">
                 <p className="text-xl font-medium text-[#8F184C] text-center italic">
-                  &quot;It&apos;s not just a website. It&apos;s your digital front desk — and we made sure it speaks your language.&quot;
+                  &quot;Quality doesn&apos;t have a nationality. Results don&apos;t have time zones. Strategic partnerships don&apos;t have geographical limitations.&quot;
                 </p>
               </div>
             </div>
@@ -683,8 +745,8 @@ export default function FreakingMindsPage() {
                   <circle cx="12" cy="12" r="1"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-[#525151] mb-4">Built Around Your Goals</h3>
-              <p className="text-[#757373] leading-relaxed">Designed to drive trust, bookings & brand reputation — not just look pretty.</p>
+              <h3 className="text-xl font-bold text-[#525151] mb-4">Strategic Investment Approach</h3>
+              <p className="text-[#757373] leading-relaxed">60-70% cost efficiency vs UK agencies without compromising on deliverables. ROI-focused partnerships.</p>
             </div>
             
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center group hover:shadow-xl transition-all duration-300">
@@ -693,39 +755,46 @@ export default function FreakingMindsPage() {
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-[#525151] mb-4">Designed to Reflect You</h3>
-              <p className="text-[#757373] leading-relaxed">No templates — this is Harley Street level design that matches your prestige.</p>
+              <h3 className="text-xl font-bold text-[#525151] mb-4">London-Standard Execution</h3>
+              <p className="text-[#757373] leading-relaxed">Premium quality delivery that matches UK agency standards. No compromise on expertise or professionalism.</p>
             </div>
             
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center group hover:shadow-xl transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-[#8F184C] to-[#D2B7C2] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63c-.34-.81-1.08-1.37-1.96-1.37h-6c-.88 0-1.62.56-1.96 1.37L7.5 16H10v6h10zM8.5 12.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S10.83 11 10 11s-1.5.67-1.5 1.5z"/>
+                  <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-[#525151] mb-4">A Partner, Not Just a Vendor</h3>
-              <p className="text-[#757373] leading-relaxed">Monthly support, proactive updates, and smart suggestions for growth.</p>
+              <h3 className="text-xl font-bold text-[#525151] mb-4">Global Partnership Model</h3>
+              <p className="text-[#757373] leading-relaxed">Your extended team in India. Time-zone aligned communication, UK business hours support, long-term partnership approach.</p>
             </div>
           </div>
 
-          {/* Final CTA */}
+          {/* Strategic Partnership CTA */}
           <div className="bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] rounded-3xl p-12 text-center text-white">
-            <h3 className="text-3xl font-bold mb-6">Let&apos;s build something worthy of your name.</h3>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Ready to see what a true digital partnership looks like? Let&apos;s start with a conversation.
+            <h3 className="text-3xl font-bold mb-6">Ready for a strategic digital partnership?</h3>
+            <p className="text-xl text-white/90 mb-6 max-w-3xl mx-auto leading-relaxed">
+              You&apos;ve seen what we can build. Now let&apos;s discuss your SEO, digital marketing, and growth goals. 
+              Same quality as London agencies, strategic global pricing.
             </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 max-w-2xl mx-auto">
+              <p className="text-white/90 text-lg font-medium">
+                <span className="text-yellow-200">£5,000-10,000/month</span> → London Agency Rates<br/>
+                <span className="text-green-200 font-bold">£2,000-4,000/month</span> → Our Strategic Rates
+              </p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="mailto:hello@freakingminds.com"
-                className="bg-white text-[#8F184C] hover:bg-[#E0D8DB] px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="bg-white text-[#8F184C] hover:bg-[#E0D8DB] px-10 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center"
               >
-                Schedule a 15-min Call →
+                Discuss Partnership Strategy →
               </Link>
               <Link 
                 href="tel:+918800000000"
-                className="bg-white/10 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/20 hover:border-white/60 px-8 py-4 font-semibold rounded-full transition-all duration-300"
+                className="bg-white/10 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/20 hover:border-white/60 px-10 py-4 font-semibold rounded-full transition-all duration-300 flex items-center justify-center"
               >
-                Call Us Directly
+                Schedule Strategy Call
               </Link>
             </div>
           </div>
