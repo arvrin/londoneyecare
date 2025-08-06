@@ -41,11 +41,31 @@ export default function FreakingMindsPage() {
       <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 hidden lg:block">
         <div className="bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg border border-gray-200">
           {[
-            { id: 'hero', label: 'Welcome', icon: '🏠' },
-            { id: 'before-after', label: 'Transformation', icon: '🔄' },
-            { id: 'about', label: 'About', icon: '👥' },
-            { id: 'pricing', label: 'Pricing', icon: '💰' },
-            { id: 'partnership', label: 'Partnership', icon: '🤝' }
+            { id: 'hero', label: 'Welcome', icon: (
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              </svg>
+            ) },
+            { id: 'before-after', label: 'Transformation', icon: (
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8c-.45-.83-.7-1.79-.7-2.8 0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.44.84.7 1.79.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z"/>
+              </svg>
+            ) },
+            { id: 'about', label: 'About', icon: (
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63c-.34-.81-1.08-1.37-1.96-1.37h-6c-.88 0-1.62.56-1.96 1.37L7.5 16H10v6h10z"/>
+              </svg>
+            ) },
+            { id: 'pricing', label: 'Pricing', icon: (
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+              </svg>
+            ) },
+            { id: 'partnership', label: 'Partnership', icon: (
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63c-.34-.81-1.08-1.37-1.96-1.37h-6c-.88 0-1.62.56-1.96 1.37L7.5 16H10v6h10zM8.5 12.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S10.83 11 10 11s-1.5.67-1.5 1.5z"/>
+              </svg>
+            ) }
           ].map((item) => (
             <button
               key={item.id}
@@ -57,8 +77,9 @@ export default function FreakingMindsPage() {
               }`}
               title={item.label}
             >
-              <div className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                {item.icon} {item.label}
+              <div className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-[#525151] text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap flex items-center space-x-1">
+                <span className="text-[#D2B7C2]">{item.icon}</span> 
+                <span>{item.label}</span>
               </div>
             </button>
           ))}
@@ -113,7 +134,7 @@ export default function FreakingMindsPage() {
               <div className="flex flex-col sm:flex-row gap-6">
                 <button 
                   onClick={() => scrollToSection('before-after')}
-                  className="bg-white text-pink-600 hover:bg-pink-50 px-10 py-4 text-lg font-semibold rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
+                  className="bg-white text-[#8F184C] hover:bg-[#E0D8DB] px-10 py-4 text-lg font-semibold rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
                 >
                   Explore Our Work ↓
                 </button>
@@ -133,7 +154,9 @@ export default function FreakingMindsPage() {
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                      <span className="text-2xl">✨</span>
+                      <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                      </svg>
                     </div>
                     <div>
                       <h3 className="text-white font-semibold">Premium Design</h3>
@@ -143,7 +166,9 @@ export default function FreakingMindsPage() {
                   
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                      <span className="text-2xl">⚡</span>
+                      <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+                      </svg>
                     </div>
                     <div>
                       <h3 className="text-white font-semibold">Lightning Fast</h3>
@@ -153,7 +178,12 @@ export default function FreakingMindsPage() {
                   
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                      <span className="text-2xl">🎯</span>
+                      <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                        <circle cx="12" cy="12" r="5"/>
+                        <circle cx="12" cy="12" r="3" fill="white"/>
+                        <circle cx="12" cy="12" r="1"/>
+                      </svg>
                     </div>
                     <div>
                       <h3 className="text-white font-semibold">Conversion Focused</h3>
@@ -168,25 +198,27 @@ export default function FreakingMindsPage() {
       </section>
 
       {/* Before/After Section */}
-      <section id="before-after" className="py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-gray-50/30 relative overflow-hidden">
+      <section id="before-after" className="py-20 lg:py-32 bg-gradient-to-br from-[#E6E5E5] via-white to-[#E0D8DB]/30 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.04]" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(233,30,99,0.3) 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(143,24,76,0.3) 1px, transparent 0)`,
           backgroundSize: '32px 32px'
         }}></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-pink-100 border border-pink-200 text-pink-700 text-sm font-medium mb-6">
-              <span className="mr-2">🔄</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#E0D8DB]/30 border border-[#D2B7C2]/50 text-[#8F184C] text-sm font-medium mb-6">
+              <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8c-.45-.83-.7-1.79-.7-2.8 0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.44.84.7 1.79.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z"/>
+              </svg>
               Design Transformation
             </div>
-            <h2 className="text-4xl lg:text-6xl font-display font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-6xl font-display font-bold text-[#525151] mb-6">
               From Basic to
-              <span className="block bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent font-extrabold">
+              <span className="block bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] bg-clip-text text-transparent font-extrabold">
                 Brilliant
               </span>
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-[#757373] max-w-3xl mx-auto leading-relaxed">
               A complete transformation of London Eyecare&apos;s digital presence — from outdated to outstanding.
             </p>
           </div>
@@ -261,7 +293,7 @@ export default function FreakingMindsPage() {
           </div>
 
           {/* Results */}
-          <div className="mt-16 bg-gradient-to-r from-pink-600 to-purple-600 rounded-3xl p-8 text-center text-white">
+          <div className="mt-16 bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] rounded-3xl p-8 text-center text-white">
             <h3 className="text-2xl font-bold mb-6">Transformation Results</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
@@ -283,7 +315,7 @@ export default function FreakingMindsPage() {
           <div className="text-center mt-12">
             <button 
               onClick={() => scrollToSection('about')}
-              className="bg-gradient-to-r from-pink-600 to-purple-600 text-white hover:from-pink-700 hover:to-purple-700 px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] text-white hover:from-[#CA226B] hover:to-[#DBC5CE] px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Curious what we&apos;d do for your brand? →
             </button>
@@ -292,7 +324,7 @@ export default function FreakingMindsPage() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 lg:py-32 bg-gradient-to-br from-gray-900 via-purple-900 to-pink-900 relative overflow-hidden">
+      <section id="about" className="py-20 lg:py-32 bg-gradient-to-br from-[#525151] via-[#8F184C] to-[#D2B7C2] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.2) 1px, transparent 0)`,
@@ -303,7 +335,9 @@ export default function FreakingMindsPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-6">
-              <span className="mr-2">👥</span>
+              <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63c-.34-.81-1.08-1.37-1.96-1.37h-6c-.88 0-1.62.56-1.96 1.37L7.5 16H10v6h10z"/>
+              </svg>
               Meet the Team
             </div>
             <h2 className="text-4xl lg:text-6xl font-display font-bold text-white mb-6">
@@ -317,24 +351,33 @@ export default function FreakingMindsPage() {
           {/* Core Values */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 text-center group hover:bg-white/15 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl">🎯</span>
+              <div className="w-16 h-16 bg-gradient-to-br from-[#8F184C] to-[#D2B7C2] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                  <circle cx="12" cy="12" r="5"/>
+                  <circle cx="12" cy="12" r="3" fill="rgba(255,255,255,0.3)"/>
+                  <circle cx="12" cy="12" r="1"/>
+                </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Empathy-Led Design</h3>
               <p className="text-white/80 leading-relaxed">Built for how real people think, click, and convert. Every interaction is carefully crafted for your users.</p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 text-center group hover:bg-white/15 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl">💡</span>
+              <div className="w-16 h-16 bg-gradient-to-br from-[#8F184C] to-[#D2B7C2] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"/>
+                </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Creative + Strategic</h3>
               <p className="text-white/80 leading-relaxed">No fluff. Just ideas that work. We blend creativity with data-driven strategy for maximum impact.</p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 text-center group hover:bg-white/15 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl">🌐</span>
+              <div className="w-16 h-16 bg-gradient-to-br from-[#8F184C] to-[#D2B7C2] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/>
+                </svg>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Global Partners, Local Impact</h3>
               <p className="text-white/80 leading-relaxed">India-based. Globally trusted. We bring international standards to local partnerships.</p>
@@ -353,7 +396,7 @@ export default function FreakingMindsPage() {
           <div className="text-center mt-12">
             <button 
               onClick={() => scrollToSection('pricing')}
-              className="bg-white text-pink-600 hover:bg-pink-50 px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="bg-white text-[#8F184C] hover:bg-[#E0D8DB] px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Let&apos;s build something memorable →
             </button>
@@ -364,23 +407,25 @@ export default function FreakingMindsPage() {
       {/* Pricing Section */}
       <section id="pricing" className="py-20 lg:py-32 bg-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(233,30,99,0.3) 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(143,24,76,0.3) 1px, transparent 0)`,
           backgroundSize: '24px 24px'
         }}></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-pink-100 border border-pink-200 text-pink-700 text-sm font-medium mb-6">
-              <span className="mr-2">💰</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#E0D8DB]/30 border border-[#D2B7C2]/50 text-[#8F184C] text-sm font-medium mb-6">
+              <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+              </svg>
               Transparent Pricing
             </div>
-            <h2 className="text-4xl lg:text-6xl font-display font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-6xl font-display font-bold text-[#525151] mb-6">
               No vague packages.
-              <span className="block bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent font-extrabold">
+              <span className="block bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] bg-clip-text text-transparent font-extrabold">
                 No hidden fees.
               </span>
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-[#757373] max-w-3xl mx-auto leading-relaxed">
               Just clear deliverables that align with your growth goals. Choose what you need, when you need it.
             </p>
           </div>
@@ -434,12 +479,12 @@ export default function FreakingMindsPage() {
               <div key={index} className={`group relative ${item.popular ? 'md:col-span-2 xl:col-span-1' : ''}`}>
                 <div className={`bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border transform hover:-translate-y-2 ${
                   item.popular 
-                    ? 'border-pink-200 ring-2 ring-pink-500/20 scale-105' 
-                    : 'border-gray-200 hover:border-pink-200'
+                    ? 'border-[#D2B7C2]/50 ring-2 ring-[#8F184C]/20 scale-105' 
+                    : 'border-gray-200 hover:border-[#D2B7C2]/50'
                 }`}>
                   {item.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <div className="bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </div>
                     </div>
@@ -453,7 +498,7 @@ export default function FreakingMindsPage() {
                       <p className="text-sm text-gray-700 leading-relaxed">{item.details}</p>
                     </div>
                     
-                    <div className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent mb-6">
+                    <div className="text-2xl font-bold bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] bg-clip-text text-transparent mb-6">
                       {item.price}
                     </div>
                     
@@ -461,8 +506,8 @@ export default function FreakingMindsPage() {
                       href="mailto:hello@freakingminds.com"
                       className={`w-full py-3 px-6 rounded-full font-semibold transition-all duration-300 ${
                         item.popular
-                          ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 shadow-lg hover:shadow-xl'
-                          : 'bg-pink-50 text-pink-600 hover:bg-pink-100 border border-pink-200'
+                          ? 'bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] text-white hover:from-[#CA226B] hover:to-[#DBC5CE] shadow-lg hover:shadow-xl'
+                          : 'bg-[#E0D8DB]/30 text-[#8F184C] hover:bg-[#D2B7C2]/30 border border-[#D2B7C2]/50'
                       }`}
                     >
                       Get Started
@@ -474,12 +519,12 @@ export default function FreakingMindsPage() {
           </div>
 
           {/* Bundle CTA */}
-          <div className="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-3xl p-8 text-center border border-pink-100">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Need help choosing the right mix?</h3>
-            <p className="text-gray-700 mb-6">We&apos;ll create a custom bundle that fits your specific goals and budget.</p>
+          <div className="mt-16 bg-gradient-to-r from-[#E0D8DB]/30 to-[#D2B7C2]/20 rounded-3xl p-8 text-center border border-[#D2B7C2]/30">
+            <h3 className="text-2xl font-bold text-[#525151] mb-4">Need help choosing the right mix?</h3>
+            <p className="text-[#757373] mb-6">We&apos;ll create a custom bundle that fits your specific goals and budget.</p>
             <Link 
               href="mailto:hello@freakingminds.com"
-              className="bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] text-white hover:from-[#CA226B] hover:to-[#DBC5CE] px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Let&apos;s Build Your Bundle
             </Link>
@@ -488,21 +533,23 @@ export default function FreakingMindsPage() {
       </section>
 
       {/* Partnership Section */}
-      <section id="partnership" className="py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-pink-50/30 relative overflow-hidden">
+      <section id="partnership" className="py-20 lg:py-32 bg-gradient-to-br from-[#E6E5E5] via-white to-[#E0D8DB]/30 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.04]" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(233,30,99,0.3) 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(143,24,76,0.3) 1px, transparent 0)`,
           backgroundSize: '32px 32px'
         }}></div>
         
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-pink-100 border border-pink-200 text-pink-700 text-sm font-medium mb-6">
-              <span className="mr-2">🤝</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#E0D8DB]/30 border border-[#D2B7C2]/50 text-[#8F184C] text-sm font-medium mb-6">
+              <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63c-.34-.81-1.08-1.37-1.96-1.37h-6c-.88 0-1.62.56-1.96 1.37L7.5 16H10v6h10zM8.5 12.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S10.83 11 10 11s-1.5.67-1.5 1.5z"/>
+              </svg>
               A Personal Message
             </div>
-            <h2 className="text-4xl lg:text-6xl font-display font-bold text-gray-900 mb-8">
+            <h2 className="text-4xl lg:text-6xl font-display font-bold text-[#525151] mb-8">
               Why Partner
-              <span className="block bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent font-extrabold">
+              <span className="block bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] bg-clip-text text-transparent font-extrabold">
                 With Us
               </span>
             </h2>
@@ -511,15 +558,15 @@ export default function FreakingMindsPage() {
           {/* Personal Letter */}
           <div className="bg-white rounded-3xl p-12 shadow-xl border border-gray-100 mb-12">
             <div className="prose prose-lg max-w-none">
-              <p className="text-xl text-gray-800 leading-relaxed mb-6">
+              <p className="text-xl text-[#525151] leading-relaxed mb-6">
                 <strong>Dear London Eyecare,</strong>
               </p>
               
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              <p className="text-lg text-[#757373] leading-relaxed mb-6">
                 You&apos;re not just another clinic — you&apos;re a name on Harley Street. That means something.
               </p>
               
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              <p className="text-lg text-[#757373] leading-relaxed mb-6">
                 And we believe your digital presence should feel as premium as your care.
               </p>
               
@@ -527,8 +574,8 @@ export default function FreakingMindsPage() {
                 We didn&apos;t pitch randomly. We studied your old site, mapped your gaps, and rebuilt it the way we wish every medical brand&apos;s site worked.
               </p>
               
-              <div className="bg-pink-50 rounded-2xl p-6 border border-pink-100">
-                <p className="text-xl font-medium text-pink-800 text-center italic">
+              <div className="bg-[#E0D8DB]/30 rounded-2xl p-6 border border-[#D2B7C2]/30">
+                <p className="text-xl font-medium text-[#8F184C] text-center italic">
                   &quot;It&apos;s not just a website. It&apos;s your digital front desk — and we made sure it speaks your language.&quot;
                 </p>
               </div>
@@ -538,32 +585,41 @@ export default function FreakingMindsPage() {
           {/* Partnership Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center group hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl">🎯</span>
+              <div className="w-16 h-16 bg-gradient-to-br from-[#8F184C] to-[#D2B7C2] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                  <circle cx="12" cy="12" r="5"/>
+                  <circle cx="12" cy="12" r="3" fill="rgba(255,255,255,0.3)"/>
+                  <circle cx="12" cy="12" r="1"/>
+                </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Built Around Your Goals</h3>
-              <p className="text-gray-600 leading-relaxed">Designed to drive trust, bookings & brand reputation — not just look pretty.</p>
+              <h3 className="text-xl font-bold text-[#525151] mb-4">Built Around Your Goals</h3>
+              <p className="text-[#757373] leading-relaxed">Designed to drive trust, bookings & brand reputation — not just look pretty.</p>
             </div>
             
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center group hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl">✨</span>
+              <div className="w-16 h-16 bg-gradient-to-br from-[#8F184C] to-[#D2B7C2] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Designed to Reflect You</h3>
-              <p className="text-gray-600 leading-relaxed">No templates — this is Harley Street level design that matches your prestige.</p>
+              <h3 className="text-xl font-bold text-[#525151] mb-4">Designed to Reflect You</h3>
+              <p className="text-[#757373] leading-relaxed">No templates — this is Harley Street level design that matches your prestige.</p>
             </div>
             
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center group hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl">🤝</span>
+              <div className="w-16 h-16 bg-gradient-to-br from-[#8F184C] to-[#D2B7C2] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <svg className="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63c-.34-.81-1.08-1.37-1.96-1.37h-6c-.88 0-1.62.56-1.96 1.37L7.5 16H10v6h10zM8.5 12.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5S10.83 11 10 11s-1.5.67-1.5 1.5z"/>
+                </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">A Partner, Not Just a Vendor</h3>
-              <p className="text-gray-600 leading-relaxed">Monthly support, proactive updates, and smart suggestions for growth.</p>
+              <h3 className="text-xl font-bold text-[#525151] mb-4">A Partner, Not Just a Vendor</h3>
+              <p className="text-[#757373] leading-relaxed">Monthly support, proactive updates, and smart suggestions for growth.</p>
             </div>
           </div>
 
           {/* Final CTA */}
-          <div className="bg-gradient-to-r from-pink-600 to-purple-600 rounded-3xl p-12 text-center text-white">
+          <div className="bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] rounded-3xl p-12 text-center text-white">
             <h3 className="text-3xl font-bold mb-6">Let&apos;s build something worthy of your name.</h3>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Ready to see what a true digital partnership looks like? Let&apos;s start with a conversation.
@@ -571,7 +627,7 @@ export default function FreakingMindsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="mailto:hello@freakingminds.com"
-                className="bg-white text-pink-600 hover:bg-pink-50 px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                className="bg-white text-[#8F184C] hover:bg-[#E0D8DB] px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
               >
                 Schedule a 15-min Call →
               </Link>
@@ -591,7 +647,7 @@ export default function FreakingMindsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-400 mb-4">A showcase of premium web development</p>
           <div className="flex justify-center space-x-8">
-            <Link href="mailto:hello@freakingminds.com" className="text-pink-400 hover:text-pink-300 transition-colors">
+            <Link href="mailto:hello@freakingminds.com" className="text-[#D2B7C2] hover:text-white transition-colors">
               hello@freakingminds.com
             </Link>
             <Link href="/" className="text-gray-400 hover:text-white transition-colors">

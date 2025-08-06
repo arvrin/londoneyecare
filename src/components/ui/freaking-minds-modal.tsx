@@ -44,7 +44,7 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
       {/* Modal */}
       <div className="relative z-10 flex items-center justify-center min-h-screen p-4">
         <div className={`
-          relative w-full max-w-2xl backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden
+          relative w-full max-w-3xl backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden
           transition-all duration-300 transform
           ${isVisible ? 'scale-100 translate-y-0' : 'scale-95 translate-y-4'}
         `} style={{
@@ -66,9 +66,9 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
             {/* Premium Glass Effect Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#E6E5E5]/98 via-[#E0D8DB]/95 to-[#D2B7C2]/90 backdrop-blur-xl rounded-3xl"></div>
             
-            <div className="relative p-8 lg:p-12">
-              {/* Header */}
-              <div className="text-center mb-8">
+            <div className="relative p-10 lg:p-16">
+              {/* Header with Better Spacing */}
+              <div className="text-center mb-12">
                 <div className="flex flex-col items-center justify-center mb-6">
                   <Image
                     src="/FM logo.png"
@@ -78,14 +78,14 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
                     className="object-contain mb-4"
                     priority
                   />
-                  <h2 className="text-3xl lg:text-4xl font-display font-bold bg-gradient-to-r from-[#8F184C] to-[#73143D] bg-clip-text text-transparent mb-4">
+                  <h2 className="text-3xl lg:text-4xl font-display font-bold bg-gradient-to-r from-[#8F184C] to-[#73143D] bg-clip-text text-transparent mb-6 leading-tight">
                     Welcome to the Freaking Minds Experience
                   </h2>
                 </div>
                 
                 <div className="w-32 h-1 bg-gradient-to-r from-[#8F184C] via-[#D2B7C2] to-[#8F184C] mx-auto mb-6 rounded-full shadow-lg"></div>
                 
-                <div className="text-lg text-slate-700 leading-relaxed space-y-4 max-w-2xl mx-auto">
+                <div className="text-lg text-[#525151] leading-relaxed space-y-6 max-w-2xl mx-auto">
                   <p>
                     Everything you see here — the flow, the feel, the finesse — is built with one goal: <span className="font-semibold text-[#8F184C]">a better digital experience for you</span>.
                   </p>
@@ -95,9 +95,9 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
                 </div>
               </div>
 
-              {/* Premium Experience Highlights with Glass Effect */}
-              <div className="bg-gradient-to-r from-[#E6E5E5]/40 via-[#E0D8DB]/30 to-[#D2B7C2]/20 backdrop-blur-sm rounded-2xl p-6 border border-[#D2B7C2]/30 shadow-xl">
-                <div className="grid md:grid-cols-3 gap-6 text-center">
+              {/* Premium Experience Highlights with Better Spacing */}
+              <div className="bg-gradient-to-r from-[#E6E5E5]/40 via-[#E0D8DB]/30 to-[#D2B7C2]/20 backdrop-blur-sm rounded-2xl p-8 border border-[#D2B7C2]/30 shadow-xl mb-10">
+                <div className="grid md:grid-cols-3 gap-8 text-center">
                   <div className="space-y-3">
                     <div className="w-12 h-12 bg-gradient-to-br from-[#8F184C] to-[#CA226B] rounded-xl flex items-center justify-center mx-auto shadow-lg">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -131,8 +131,8 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
                 </div>
               </div>
 
-              {/* CTA Section */}
-              <div className="text-center">
+              {/* Enhanced CTA Section with Breathing Room */}
+              <div className="text-center mt-10">
                 <div className="inline-flex items-center justify-center">
                   <button
                     onClick={handleClose}
@@ -150,13 +150,13 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
                   </button>
                 </div>
                 
-                <p className="text-sm text-[#757373] mt-4 font-light">
+                <p className="text-sm text-[#757373] mt-6 font-light">
                   Continue exploring this premium experience
                 </p>
               </div>
 
-              {/* Sophisticated Footer */}
-              <div className="text-center pt-6 border-t border-[#D2B7C2]/30">
+              {/* Sophisticated Footer with Proper Spacing */}
+              <div className="text-center pt-8 mt-8 border-t border-[#D2B7C2]/30">
                 <p className="text-sm text-[#757373] mb-3 font-light">
                   A showcase of premium web development by Freaking Minds
                 </p>
