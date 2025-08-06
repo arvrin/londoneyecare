@@ -88,21 +88,24 @@ export default function FreakingMindsPage() {
 
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Magenta Gradient Background */}
+        {/* Sophisticated Gradient Background */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(135deg, #8F184C 0%, #D2B7C2 50%, #8F184C 100%)'
+          background: 'linear-gradient(135deg, #2D1B4E 0%, #8F184C 25%, #D2B7C2 75%, #E6E5E5 100%)'
         }}>
-          {/* Animated Elements */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-white rounded-full blur-3xl animate-pulse" style={{animationDelay: '3s'}}></div>
+          {/* Subtle Animated Elements */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute top-1/3 left-1/5 w-80 h-80 bg-white rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-1/3 right-1/5 w-96 h-96 bg-[#E6E5E5] rounded-full blur-3xl animate-pulse" style={{animationDelay: '4s'}}></div>
           </div>
           
-          {/* Dot Pattern */}
-          <div className="absolute inset-0 opacity-20" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(230,229,229,0.3) 2px, transparent 0)`,
-            backgroundSize: '40px 40px'
+          {/* Premium Texture Pattern */}
+          <div className="absolute inset-0 opacity-8" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
+            backgroundSize: '60px 60px'
           }}></div>
+          
+          {/* Gradient Overlay for Better Text Contrast */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -120,74 +123,84 @@ export default function FreakingMindsPage() {
                 />
               </div>
               
-              <h1 className="text-5xl lg:text-7xl font-display font-bold text-white mb-8 leading-tight">
+              <h1 className="text-5xl lg:text-7xl font-display font-bold text-white mb-8 leading-[1.1] tracking-tight">
                 We don&apos;t just build websites.
-                <span className="block text-white/90 font-black">
+                <span className="block text-white/95 font-black bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
                   We craft digital experiences.
                 </span>
               </h1>
               
-              <p className="text-xl text-white/90 mb-10 max-w-2xl leading-relaxed">
+              <p className="text-xl text-white/85 mb-10 max-w-2xl leading-relaxed font-medium">
                 See how we transformed London Eyecare from basic to brilliant — and discover what we could create for your brand.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6">
                 <button 
                   onClick={() => scrollToSection('before-after')}
-                  className="bg-white text-[#8F184C] hover:bg-[#E0D8DB] px-10 py-4 text-lg font-semibold rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
+                  className="group relative overflow-hidden bg-white/95 text-[#2D1B4E] hover:text-white px-12 py-5 text-lg font-semibold rounded-full transition-all duration-500 shadow-2xl hover:shadow-[0_20px_40px_rgba(143,24,76,0.3)] transform hover:scale-105 backdrop-blur-sm"
                 >
-                  Explore Our Work ↓
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#8F184C] via-[#D2B7C2] to-[#8F184C] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
+                  <span className="relative z-10 flex items-center justify-center">
+                    Explore Our Work 
+                    <svg className="w-5 h-5 ml-2 group-hover:translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                  </span>
                 </button>
                 
                 <Link 
                   href="mailto:hello@freakingminds.com"
-                  className="px-10 py-4 text-lg bg-white/10 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/20 hover:border-white/60 rounded-full transition-all duration-300 shadow-lg"
+                  className="group px-12 py-5 text-lg bg-white/5 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/15 hover:border-white/50 rounded-full transition-all duration-500 shadow-lg hover:shadow-xl relative overflow-hidden"
                 >
-                  Get In Touch
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <span className="relative z-10 font-medium">Get In Touch</span>
                 </Link>
               </div>
             </div>
             
             {/* Visual Showcase */}
             <div className="relative">
-              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+              <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-10 border border-white/20 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] relative overflow-hidden">
+                {/* Subtle internal gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-[#8F184C]/10 rounded-3xl"></div>
+                
+                <div className="relative z-10 space-y-8">
+                  <div className="flex items-center space-x-5 group">
+                    <div className="w-14 h-14 bg-gradient-to-br from-white/30 to-white/10 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 border border-white/20">
+                      <svg className="w-7 h-7 text-white drop-shadow-sm" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold">Premium Design</h3>
-                      <p className="text-white/70 text-sm">Harley Street level quality</p>
+                      <h3 className="text-white font-bold text-lg drop-shadow-sm">Premium Design</h3>
+                      <p className="text-white/80 text-sm font-medium">Harley Street level quality</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <div className="flex items-center space-x-5 group">
+                    <div className="w-14 h-14 bg-gradient-to-br from-white/30 to-white/10 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 border border-white/20">
+                      <svg className="w-7 h-7 text-white drop-shadow-sm" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold">Lightning Fast</h3>
-                      <p className="text-white/70 text-sm">Optimized performance</p>
+                      <h3 className="text-white font-bold text-lg drop-shadow-sm">Lightning Fast</h3>
+                      <p className="text-white/80 text-sm font-medium">Optimized performance</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                  <div className="flex items-center space-x-5 group">
+                    <div className="w-14 h-14 bg-gradient-to-br from-white/30 to-white/10 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 border border-white/20">
+                      <svg className="w-7 h-7 text-white drop-shadow-sm" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
                         <circle cx="12" cy="12" r="5"/>
-                        <circle cx="12" cy="12" r="3" fill="white"/>
+                        <circle cx="12" cy="12" r="3" fill="white" opacity="0.8"/>
                         <circle cx="12" cy="12" r="1"/>
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold">Conversion Focused</h3>
-                      <p className="text-white/70 text-sm">Built to drive results</p>
+                      <h3 className="text-white font-bold text-lg drop-shadow-sm">Conversion Focused</h3>
+                      <p className="text-white/80 text-sm font-medium">Built to drive results</p>
                     </div>
                   </div>
                 </div>
@@ -198,27 +211,30 @@ export default function FreakingMindsPage() {
       </section>
 
       {/* Before/After Section */}
-      <section id="before-after" className="py-20 lg:py-32 bg-gradient-to-br from-[#E6E5E5] via-white to-[#E0D8DB]/30 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.04]" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(143,24,76,0.3) 1px, transparent 0)`,
-          backgroundSize: '32px 32px'
+      <section id="before-after" className="py-20 lg:py-32 bg-gradient-to-br from-[#FAFAFA] via-white to-[#F8F9FA] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `radial-gradient(circle at 2px 2px, rgba(143,24,76,0.2) 1px, transparent 0)`,
+          backgroundSize: '48px 48px'
         }}></div>
+        
+        {/* Subtle gradient overlays for depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-white/20"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-[#E0D8DB]/30 border border-[#D2B7C2]/50 text-[#8F184C] text-sm font-medium mb-6">
-              <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-white/80 backdrop-blur-sm border border-[#D2B7C2]/30 text-[#8F184C] text-sm font-semibold mb-8 shadow-lg">
+              <svg className="w-5 h-5 mr-3" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8c-.45-.83-.7-1.79-.7-2.8 0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.44.84.7 1.79.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z"/>
               </svg>
               Design Transformation
             </div>
-            <h2 className="text-4xl lg:text-6xl font-display font-bold text-[#525151] mb-6">
+            <h2 className="text-4xl lg:text-6xl font-display font-bold text-[#2D1B4E] mb-8 leading-[1.1] tracking-tight">
               From Basic to
-              <span className="block bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] bg-clip-text text-transparent font-extrabold">
+              <span className="block bg-gradient-to-r from-[#8F184C] via-[#D2B7C2] to-[#8F184C] bg-clip-text text-transparent font-extrabold">
                 Brilliant
               </span>
             </h2>
-            <p className="text-xl text-[#757373] max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-[#525151] max-w-3xl mx-auto leading-relaxed font-medium">
               A complete transformation of London Eyecare&apos;s digital presence — from outdated to outstanding.
             </p>
           </div>
@@ -227,32 +243,53 @@ export default function FreakingMindsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Before */}
             <div className="space-y-6">
-              <div className="bg-red-50 rounded-2xl p-6 border border-red-200">
-                <h3 className="text-2xl font-bold text-red-800 mb-4 flex items-center">
-                  <span className="mr-3">❌</span>
+              <div className="bg-gradient-to-br from-red-50 to-pink-50/50 rounded-3xl p-8 border border-red-100 shadow-lg">
+                <h3 className="text-2xl font-bold text-red-800 mb-6 flex items-center">
+                  <svg className="w-6 h-6 mr-3 text-red-600" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"/>
+                  </svg>
                   Before: Basic Wix Site
                 </h3>
-                <div className="bg-white rounded-xl p-4 border border-red-200 mb-6">
-                  <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500 font-medium">Old Website Screenshot</span>
+                
+                {/* Live Website Link */}
+                <Link 
+                  href="https://londoneyecare.co.uk" 
+                  target="_blank"
+                  className="group block bg-white rounded-2xl p-6 border border-red-200 mb-6 hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex flex-col items-center justify-center group-hover:scale-[1.02] transition-transform duration-300">
+                    <svg className="w-12 h-12 text-gray-400 mb-3" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span className="text-gray-600 font-medium text-center">Visit Original Website →</span>
+                    <span className="text-sm text-gray-500 mt-1">londoneyecare.co.uk</span>
                   </div>
-                </div>
-                <ul className="space-y-3">
+                </Link>
+                
+                <ul className="space-y-4">
                   <li className="flex items-start">
-                    <span className="text-red-500 mr-3 mt-1">❌</span>
-                    <span className="text-gray-700">Clunky mobile layout that frustrated users</span>
+                    <svg className="w-5 h-5 mr-3 mt-1 text-red-500 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"/>
+                    </svg>
+                    <span className="text-gray-700 leading-relaxed">Outdated design that didn&apos;t reflect Harley Street prestige</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-red-500 mr-3 mt-1">❌</span>
-                    <span className="text-gray-700">No SEO structure or search visibility</span>
+                    <svg className="w-5 h-5 mr-3 mt-1 text-red-500 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"/>
+                    </svg>
+                    <span className="text-gray-700 leading-relaxed">Poor mobile experience frustrating potential patients</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-red-500 mr-3 mt-1">❌</span>
-                    <span className="text-gray-700">Poor conversion flow and user experience</span>
+                    <svg className="w-5 h-5 mr-3 mt-1 text-red-500 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"/>
+                    </svg>
+                    <span className="text-gray-700 leading-relaxed">Limited SEO visibility in competitive London market</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-red-500 mr-3 mt-1">❌</span>
-                    <span className="text-gray-700">Generic template that didn&apos;t reflect prestige</span>
+                    <svg className="w-5 h-5 mr-3 mt-1 text-red-500 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"/>
+                    </svg>
+                    <span className="text-gray-700 leading-relaxed">Generic template lacking conversion optimization</span>
                   </li>
                 </ul>
               </div>
@@ -260,32 +297,53 @@ export default function FreakingMindsPage() {
 
             {/* After */}
             <div className="space-y-6">
-              <div className="bg-green-50 rounded-2xl p-6 border border-green-200">
-                <h3 className="text-2xl font-bold text-green-800 mb-4 flex items-center">
-                  <span className="mr-3">✅</span>
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50/50 rounded-3xl p-8 border border-emerald-100 shadow-lg">
+                <h3 className="text-2xl font-bold text-emerald-800 mb-6 flex items-center">
+                  <svg className="w-6 h-6 mr-3 text-emerald-600" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
                   Now: Premium Experience
                 </h3>
-                <div className="bg-white rounded-xl p-4 border border-green-200 mb-6">
-                  <div className="aspect-video bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-600 font-medium">New Website Screenshot</span>
+                
+                {/* Live Website Link */}
+                <Link 
+                  href="https://londoneyecare.vercel.app" 
+                  target="_blank"
+                  className="group block bg-white rounded-2xl p-6 border border-emerald-200 mb-6 hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="aspect-video bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-xl flex flex-col items-center justify-center group-hover:scale-[1.02] transition-transform duration-300">
+                    <svg className="w-12 h-12 text-indigo-400 mb-3" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span className="text-indigo-700 font-semibold text-center">Experience New Website →</span>
+                    <span className="text-sm text-indigo-500 mt-1">londoneyecare.vercel.app</span>
                   </div>
-                </div>
-                <ul className="space-y-3">
+                </Link>
+                
+                <ul className="space-y-4">
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-3 mt-1">✅</span>
-                    <span className="text-gray-700">Mobile-optimized for perfect user experience</span>
+                    <svg className="w-5 h-5 mr-3 mt-1 text-emerald-500 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span className="text-gray-700 leading-relaxed">Harley Street level premium design reflecting true prestige</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-3 mt-1">✅</span>
-                    <span className="text-gray-700">Built-in SEO architecture for search visibility</span>
+                    <svg className="w-5 h-5 mr-3 mt-1 text-emerald-500 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span className="text-gray-700 leading-relaxed">Mobile-first responsive design for perfect user experience</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-3 mt-1">✅</span>
-                    <span className="text-gray-700">Designed specifically for patient conversion</span>
+                    <svg className="w-5 h-5 mr-3 mt-1 text-emerald-500 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span className="text-gray-700 leading-relaxed">Built-in SEO architecture driving search visibility</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-500 mr-3 mt-1">✅</span>
-                    <span className="text-gray-700">Harley Street level premium design</span>
+                    <svg className="w-5 h-5 mr-3 mt-1 text-emerald-500 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span className="text-gray-700 leading-relaxed">Conversion-optimized design driving patient bookings</span>
                   </li>
                 </ul>
               </div>
