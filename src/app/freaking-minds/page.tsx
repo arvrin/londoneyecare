@@ -516,14 +516,14 @@ export default function FreakingMindsPage() {
               </span>
             </h2>
             <p className="text-xl text-[#757373] max-w-3xl mx-auto leading-relaxed mb-8">
-              London-quality execution at global market rates. Strategic partnerships shouldn&apos;t be limited by geography.
+              World-class quality with affordable pricing. Strategic partnerships that deliver premium results without premium costs.
             </p>
             
             {/* Market Positioning Statement */}
             <div className="bg-gradient-to-r from-[#E0D8DB]/20 to-[#D2B7C2]/10 rounded-2xl p-6 max-w-4xl mx-auto mb-12 border border-[#D2B7C2]/20">
               <p className="text-lg text-[#525151] text-center font-medium">
                 <span className="text-[#8F184C] font-semibold">Typical UK Agency Rates:</span> £200-400/hour • 
-                <span className="text-[#8F184C] font-semibold">Our Strategic Rates:</span> £45-85/hour • 
+                <span className="text-[#8F184C] font-semibold">Our World-Class Rates:</span> £45-85/hour • 
                 <span className="text-emerald-600 font-semibold">Your Investment Efficiency:</span> 60-75% better ROI
               </p>
             </div>
@@ -594,7 +594,7 @@ export default function FreakingMindsPage() {
               }
             ].map((item, index) => (
               <div key={index} className={`group relative ${item.popular ? 'md:col-span-2 xl:col-span-1' : ''}`}>
-                <div className={`bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border transform hover:-translate-y-2 ${
+                <div className={`bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border transform hover:-translate-y-2 h-full flex flex-col ${
                   item.popular 
                     ? 'border-[#D2B7C2]/50 ring-2 ring-[#8F184C]/20 scale-105' 
                     : 'border-gray-200 hover:border-[#D2B7C2]/50'
@@ -612,34 +612,39 @@ export default function FreakingMindsPage() {
                     {item.savings}
                   </div>
                   
-                  <div className="text-center">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{item.service}</h3>
-                    <p className="text-gray-600 mb-6">{item.summary}</p>
-                    
-                    <div className="bg-gray-50 rounded-xl p-4 mb-6">
-                      <p className="text-sm text-gray-700 leading-relaxed">{item.details}</p>
+                  <div className="text-center flex-1 flex flex-col">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 min-h-[3.5rem] flex items-center justify-center">{item.service}</h3>
+                      <p className="text-gray-600 mb-6 min-h-[3rem] flex items-center justify-center">{item.summary}</p>
+                      
+                      <div className="bg-gray-50 rounded-xl p-4 mb-6 min-h-[5rem] flex items-center justify-center">
+                        <p className="text-sm text-gray-700 leading-relaxed text-center">{item.details}</p>
+                      </div>
+                      
+                      {/* UK vs Our Pricing */}
+                      <div className="space-y-3 mb-8">
+                        <div className="text-sm text-gray-500">
+                          <span className="line-through">UK Agencies: {item.ukPrice}</span>
+                        </div>
+                        <div className="text-2xl font-bold bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] bg-clip-text text-transparent">
+                          {item.ourPrice}<span className="text-sm text-gray-600">{item.monthlyPrice}</span>
+                        </div>
+                      </div>
                     </div>
                     
-                    {/* UK vs Our Pricing */}
-                    <div className="space-y-3 mb-6">
-                      <div className="text-sm text-gray-500">
-                        <span className="line-through">UK Agencies: {item.ukPrice}</span>
-                      </div>
-                      <div className="text-2xl font-bold bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] bg-clip-text text-transparent">
-                        {item.ourPrice}<span className="text-sm text-gray-600">{item.monthlyPrice}</span>
-                      </div>
+                    {/* Fixed Position Button */}
+                    <div className="mt-auto">
+                      <Link 
+                        href="mailto:hello@freakingminds.com"
+                        className={`w-full py-4 px-6 rounded-full font-semibold transition-all duration-300 block text-center transform hover:scale-105 ${
+                          item.popular
+                            ? 'bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] text-white hover:from-[#CA226B] hover:to-[#DBC5CE] shadow-lg hover:shadow-xl'
+                            : 'bg-[#E0D8DB]/30 text-[#8F184C] hover:bg-[#D2B7C2]/30 border border-[#D2B7C2]/50 hover:border-[#8F184C]/50'
+                        }`}
+                      >
+                        Start Partnership
+                      </Link>
                     </div>
-                    
-                    <Link 
-                      href="mailto:hello@freakingminds.com"
-                      className={`w-full py-3 px-6 rounded-full font-semibold transition-all duration-300 block text-center ${
-                        item.popular
-                          ? 'bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] text-white hover:from-[#CA226B] hover:to-[#DBC5CE] shadow-lg hover:shadow-xl'
-                          : 'bg-[#E0D8DB]/30 text-[#8F184C] hover:bg-[#D2B7C2]/30 border border-[#D2B7C2]/50'
-                      }`}
-                    >
-                      Start Partnership
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -719,7 +724,7 @@ export default function FreakingMindsPage() {
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                <strong>Why India?</strong> Because talent isn&apos;t geographically limited. Our team delivers London-agency quality with the efficiency of global market pricing. You get premium results with 60-70% better ROI.
+                <strong>Why India?</strong> Because talent isn&apos;t geographically limited. Our team delivers world-class quality with the efficiency of global market pricing. You get premium results with 60-70% better ROI.
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
@@ -755,8 +760,8 @@ export default function FreakingMindsPage() {
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-[#525151] mb-4">London-Standard Execution</h3>
-              <p className="text-[#757373] leading-relaxed">Premium quality delivery that matches UK agency standards. No compromise on expertise or professionalism.</p>
+              <h3 className="text-xl font-bold text-[#525151] mb-4">World-Class Execution</h3>
+              <p className="text-[#757373] leading-relaxed">Premium quality delivery that matches global industry standards. No compromise on expertise or professionalism.</p>
             </div>
             
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center group hover:shadow-xl transition-all duration-300">
@@ -775,7 +780,7 @@ export default function FreakingMindsPage() {
             <h3 className="text-3xl font-bold mb-6">Ready for a strategic digital partnership?</h3>
             <p className="text-xl text-white/90 mb-6 max-w-3xl mx-auto leading-relaxed">
               You&apos;ve seen what we can build. Now let&apos;s discuss your SEO, digital marketing, and growth goals. 
-              Same quality as London agencies, strategic global pricing.
+              World-class quality with strategic global pricing.
             </p>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 max-w-2xl mx-auto">
               <p className="text-white/90 text-lg font-medium">
