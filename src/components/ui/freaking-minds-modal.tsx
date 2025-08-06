@@ -184,19 +184,26 @@ export function useFreakingMindsModal() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Show modal only once per session with longer delay
-    const hasSeenModal = sessionStorage.getItem('freaking-minds-modal-seen');
-    if (!hasSeenModal) {
+    // Show modal once per day (instead of per session) with shorter delay
+    const hasSeenModal = localStorage.getItem('freaking-minds-modal-seen');
+    const lastSeen = localStorage.getItem('freaking-minds-modal-last-seen');
+    const now = Date.now();
+    const oneDay = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+    
+    // Show modal if never seen or if more than 24 hours have passed
+    if (!hasSeenModal || !lastSeen || (now - parseInt(lastSeen)) > oneDay) {
       const timer = setTimeout(() => {
         setIsOpen(true);
-        sessionStorage.setItem('freaking-minds-modal-seen', 'true');
-      }, 15000); // Show after 15 seconds, only once per session
+        localStorage.setItem('freaking-minds-modal-seen', 'true');
+        localStorage.setItem('freaking-minds-modal-last-seen', now.toString());
+      }, 8000); // Show after 8 seconds, once per day
 
       return () => clearTimeout(timer);
     }
   }, []);
 
   const close = () => setIsOpen(false);
+  const open = () => setIsOpen(true);
 
-  return { isOpen, close };
+  return { isOpen, close, open };
 }

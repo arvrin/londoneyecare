@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { FreakingMindsModal, useFreakingMindsModal } from '@/components/ui/freaking-minds-modal';
 
 export default function HomePage() {
-  const { isOpen, close } = useFreakingMindsModal();
+  const { isOpen, close, open } = useFreakingMindsModal();
 
   return (
     <div className="min-h-screen">
@@ -79,6 +79,14 @@ export default function HomePage() {
                     </svg>
                   </span>
                 </Link>
+                
+                {/* Temporary Modal Test Button - Remove after testing */}
+                <button 
+                  onClick={open}
+                  className="px-4 py-2 bg-pink-500 text-white rounded-lg text-sm hover:bg-pink-600 transition-colors"
+                >
+                  Test Modal
+                </button>
               </div>
               
               {/* Trust Indicators */}
