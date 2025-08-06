@@ -251,18 +251,34 @@ export default function FreakingMindsPage() {
                   Before: Basic Wix Site
                 </h3>
                 
-                {/* Live Website Link */}
+                {/* Original Website Screenshot */}
                 <Link 
                   href="https://londoneyecare.co.uk" 
                   target="_blank"
-                  className="group block bg-white rounded-2xl p-6 border border-red-200 mb-6 hover:shadow-lg transition-all duration-300"
+                  className="group block bg-white rounded-2xl p-4 border border-red-200 mb-6 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
                 >
-                  <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex flex-col items-center justify-center group-hover:scale-[1.02] transition-transform duration-300">
-                    <svg className="w-12 h-12 text-gray-400 mb-3" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
-                    <span className="text-gray-600 font-medium text-center">Visit Original Website →</span>
-                    <span className="text-sm text-gray-500 mt-1">londoneyecare.co.uk</span>
+                  <div className="aspect-video bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl relative group-hover:scale-[1.02] transition-transform duration-300 border border-gray-200">
+                    {/* Screenshot placeholder with description */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
+                      <div className="w-full max-w-sm mx-auto text-center space-y-3">
+                        <div className="text-xs text-gray-500 font-medium uppercase tracking-wide">Original Website Design</div>
+                        <div className="space-y-2 text-left">
+                          <div className="text-sm text-gray-600">• Basic Wix template structure</div>
+                          <div className="text-sm text-gray-600">• Simple navigation (Home, Collections, Booking)</div>
+                          <div className="text-sm text-gray-600">• Large hero image with gold text overlay</div>
+                          <div className="text-sm text-gray-600">• Limited mobile optimization</div>
+                          <div className="text-sm text-gray-600">• Minimal interactive elements</div>
+                        </div>
+                        <div className="pt-2">
+                          <span className="inline-flex items-center px-3 py-1 bg-red-100 text-red-700 text-xs font-medium rounded-full">
+                            Visit Live Site →
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-center mt-3">
+                    <span className="text-sm text-gray-500 font-medium">londoneyecare.co.uk</span>
                   </div>
                 </Link>
                 
@@ -271,25 +287,25 @@ export default function FreakingMindsPage() {
                     <svg className="w-5 h-5 mr-3 mt-1 text-red-500 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"/>
                     </svg>
-                    <span className="text-gray-700 leading-relaxed">Outdated design that didn&apos;t reflect Harley Street prestige</span>
+                    <span className="text-gray-700 leading-relaxed">Basic Wix template with generic styling lacking luxury feel</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 mr-3 mt-1 text-red-500 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"/>
                     </svg>
-                    <span className="text-gray-700 leading-relaxed">Poor mobile experience frustrating potential patients</span>
+                    <span className="text-gray-700 leading-relaxed">Simple navigation limiting user journey and conversions</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 mr-3 mt-1 text-red-500 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"/>
                     </svg>
-                    <span className="text-gray-700 leading-relaxed">Limited SEO visibility in competitive London market</span>
+                    <span className="text-gray-700 leading-relaxed">Limited mobile responsiveness affecting user experience</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-5 h-5 mr-3 mt-1 text-red-500 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11H7v-2h10v2z"/>
                     </svg>
-                    <span className="text-gray-700 leading-relaxed">Generic template lacking conversion optimization</span>
+                    <span className="text-gray-700 leading-relaxed">Minimal SEO structure for competitive London market</span>
                   </li>
                 </ul>
               </div>
@@ -305,18 +321,34 @@ export default function FreakingMindsPage() {
                   Now: Premium Experience
                 </h3>
                 
-                {/* Live Website Link */}
+                {/* New Website Showcase */}
                 <Link 
                   href="https://londoneyecare.vercel.app" 
                   target="_blank"
-                  className="group block bg-white rounded-2xl p-6 border border-emerald-200 mb-6 hover:shadow-lg transition-all duration-300"
+                  className="group block bg-white rounded-2xl p-4 border border-emerald-200 mb-6 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
                 >
-                  <div className="aspect-video bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-xl flex flex-col items-center justify-center group-hover:scale-[1.02] transition-transform duration-300">
-                    <svg className="w-12 h-12 text-indigo-400 mb-3" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                    <span className="text-indigo-700 font-semibold text-center">Experience New Website →</span>
-                    <span className="text-sm text-indigo-500 mt-1">londoneyecare.vercel.app</span>
+                  <div className="aspect-video bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-xl relative group-hover:scale-[1.02] transition-transform duration-300 border border-indigo-200">
+                    {/* Premium website features */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
+                      <div className="w-full max-w-sm mx-auto text-center space-y-3">
+                        <div className="text-xs text-indigo-600 font-semibold uppercase tracking-wide">Premium Redesigned Experience</div>
+                        <div className="space-y-2 text-left">
+                          <div className="text-sm text-gray-700">• Custom Next.js architecture with premium design</div>
+                          <div className="text-sm text-gray-700">• Advanced navigation with luxury dropdown menus</div>
+                          <div className="text-sm text-gray-700">• Responsive hero with professional imagery</div>
+                          <div className="text-sm text-gray-700">• Mobile-first responsive across all devices</div>
+                          <div className="text-sm text-gray-700">• Conversion-optimized user experience</div>
+                        </div>
+                        <div className="pt-2">
+                          <span className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-700 text-xs font-semibold rounded-full">
+                            Experience Premium Site →
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-center mt-3">
+                    <span className="text-sm text-indigo-600 font-semibold">londoneyecare.vercel.app</span>
                   </div>
                 </Link>
                 
