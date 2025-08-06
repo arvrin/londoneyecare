@@ -109,22 +109,40 @@ const awards = [
   {
     title: 'Best Independent Optometry Practice 2023',
     organization: 'London Healthcare Awards',
-    icon: '🏆'
+    icon: (
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M5 7h14l-.54 2.76-1.04 5.34A2 2 0 0115.49 17H8.6a2 2 0 01-1.93-1.52L5 7zm0 0l-.72-2.16A1 1 0 003.32 4H2m3 3v10a2 2 0 002 2h10a2 2 0 002-2V7m-7-2V3a1 1 0 00-1-1h-2a1 1 0 00-1 1v2m-1 4h8"/>
+        <path d="M12 8v3m0 0v3m0-3h3m-3 0H9"/>
+      </svg>
+    )
   },
   {
     title: 'Excellence in Myopia Management 2022',
     organization: 'British Optometry Association',
-    icon: '🥇'
+    icon: (
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 15.5A3.5 3.5 0 018.5 12 3.5 3.5 0 0112 8.5a3.5 3.5 0 013.5 3.5 3.5 3.5 0 01-3.5 3.5m0-5A1.5 1.5 0 0010.5 12a1.5 1.5 0 001.5 1.5 1.5 1.5 0 001.5-1.5 1.5 1.5 0 00-1.5-1.5z"/>
+        <path d="M12 1l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/>
+      </svg>
+    )
   },
   {
     title: 'Outstanding Patient Care Award 2021',
     organization: 'Private Healthcare Awards',
-    icon: '⭐'
+    icon: (
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      </svg>
+    )
   },
   {
     title: 'Innovation in Eye Care Technology 2020',
     organization: 'Medical Technology Society',
-    icon: '🔬'
+    icon: (
+      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13 10.5V7h1v3.5c.7.3 1.2.8 1.5 1.5H19v-2h1v2c.55 0 1 .45 1 1s-.45 1-1 1v2h-1v-2h-3.5c-.3.7-.8 1.2-1.5 1.5V19h1v1h-6v-1h1v-3.5c-.7-.3-1.2-.8-1.5-1.5H5v2H4v-2c-.55 0-1-.45-1-1s.45-1 1-1V10h1v2h3.5c.3-.7.8-1.2 1.5-1.5V7h1v3.5c.35.15.65.35.9.6l7.6-7.6 1.4 1.4-7.6 7.6c.25.25.45.55.6.9zM12 14c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+      </svg>
+    )
   }
 ];
 
@@ -429,7 +447,7 @@ export default function AboutPage() {
                 className="bg-gradient-to-br from-slate-50 to-blue-50/50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 border border-slate-100 group"
               >
                 <div className="flex items-start space-x-6">
-                  <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-brand-gold group-hover:scale-110 transition-transform duration-300">
                     {award.icon}
                   </div>
                   <div>

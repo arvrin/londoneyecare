@@ -117,6 +117,17 @@
   --error: #DC2626;
   --info: #2563EB;
   
+  /* Freaking Minds Brand Colors */
+  --fm-murrey: #8F184C;
+  --fm-murrey-light: #CA226B;
+  --fm-murrey-dark: #73143D;
+  --fm-platinum: #E6E5E5;
+  --fm-timberwolf: #E0D8DB;
+  --fm-thistle: #D2B7C2;
+  --fm-thistle-light: #DBC5CE;
+  --fm-davy-gray: #525151;
+  --fm-davy-gray-light: #757373;
+  
   /* Luxury Shadows - More defined */
   --shadow-luxury: 0 20px 40px rgba(27, 54, 93, 0.12);
   --shadow-soft: 0 8px 25px rgba(27, 54, 93, 0.08);
@@ -986,4 +997,139 @@ html {
 
 .animate-breathe {
   animation: breathe 4s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   FREAKING MINDS PREMIUM STYLES
+   ========================================================================== */
+
+/* Freaking Minds Button Styles */
+.btn-fm-primary {
+  background: linear-gradient(135deg, var(--fm-murrey) 0%, var(--fm-murrey-light) 100%);
+  color: white;
+  border: none;
+  font-family: var(--font-primary);
+  font-weight: var(--font-medium);
+  padding: 12px 24px;
+  border-radius: 25px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  box-shadow: 0 4px 14px rgba(143, 24, 76, 0.25);
+}
+
+.btn-fm-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.btn-fm-primary:hover::before {
+  left: 100%;
+}
+
+.btn-fm-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(143, 24, 76, 0.35);
+  background: linear-gradient(135deg, var(--fm-murrey-light) 0%, var(--fm-murrey) 100%);
+}
+
+.btn-fm-secondary {
+  background: linear-gradient(135deg, var(--fm-thistle) 0%, var(--fm-thistle-light) 100%);
+  color: var(--fm-davy-gray);
+  border: 1px solid var(--fm-thistle);
+  font-family: var(--font-primary);
+  font-weight: var(--font-medium);
+  padding: 12px 24px;
+  border-radius: 25px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  box-shadow: 0 2px 8px rgba(210, 183, 194, 0.3);
+}
+
+.btn-fm-secondary:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(210, 183, 194, 0.4);
+  background: linear-gradient(135deg, var(--fm-thistle-light) 0%, var(--fm-thistle) 100%);
+}
+
+/* Glassmorphism Card for Freaking Minds */
+.card-fm-glass {
+  background: linear-gradient(135deg, 
+    rgba(230, 229, 229, 0.9) 0%, 
+    rgba(224, 216, 219, 0.8) 50%, 
+    rgba(210, 183, 194, 0.7) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(210, 183, 194, 0.3);
+  border-radius: 20px;
+  padding: var(--space-lg);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 40px rgba(143, 24, 76, 0.1);
+}
+
+.card-fm-glass:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(143, 24, 76, 0.15);
+  border-color: rgba(143, 24, 76, 0.3);
+}
+
+/* Sophisticated Gradient Text */
+.text-fm-gradient {
+  background: linear-gradient(135deg, var(--fm-murrey) 0%, var(--fm-thistle) 50%, var(--fm-murrey) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+/* Premium Hover Effects */
+@keyframes floatPremium {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+.hover-float-premium:hover {
+  animation: floatPremium 0.6s ease-in-out;
+}
+
+/* Sophisticated Loading Animation */
+@keyframes sophisticatedPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-sophisticated-pulse {
+  animation: sophisticatedPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }

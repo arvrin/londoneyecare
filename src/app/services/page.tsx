@@ -130,32 +130,63 @@ const additionalServices = [
   {
     title: 'Emergency Eye Care',
     description: 'Same-day urgent appointments for eye injuries and sudden vision changes',
-    icon: '🚨'
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        <path d="M12 6c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1m0 10c.55 0 1-.45 1-1s-.45-1-1-1-1 .45-1 1 .45 1 1 1m0-6c.55 0 1-.45 1-1s-.45-1-1-1-1 .45-1 1 .45 1 1 1"/>
+      </svg>
+    )
   },
   {
     title: 'Pre & Post-Operative Care',
     description: 'Comprehensive support before and after eye surgery procedures',
-    icon: '🏥'
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+        <circle cx="9" cy="9" r="1"/>
+        <circle cx="15" cy="9" r="1"/>
+      </svg>
+    )
   },
   {
     title: 'Diabetic Eye Screening',
     description: 'Specialized monitoring for diabetes-related eye complications',
-    icon: '🔬'
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19.8 10.7L4.2 5l-.7 1.9L17.6 12H5v2h12.6L3.5 19.1l.7 1.9 15.6-5.7c.8-.3 1.2-1 1.2-1.8s-.4-1.5-1.2-1.8z"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>
+    )
   },
   {
     title: 'Glaucoma Monitoring',
     description: 'Advanced detection and monitoring of glaucoma progression',
-    icon: '📊'
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+      </svg>
+    )
   },
   {
     title: 'Vision Therapy',
     description: 'Customized exercises to improve visual skills and processing',
-    icon: '🎯'
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+        <circle cx="12" cy="12" r="5"/>
+        <circle cx="12" cy="12" r="3" fill="white"/>
+        <circle cx="12" cy="12" r="1"/>
+      </svg>
+    )
   },
   {
     title: 'Sports Vision',
     description: 'Performance optimization for athletes and active individuals',
-    icon: '⚡'
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+      </svg>
+    )
   }
 ];
 
@@ -360,7 +391,7 @@ export default function ServicesPage() {
               <div key={index} className="group">
                 <div className="bg-white/8 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-brand-gold/40 transition-all duration-300 hover:bg-white/12">
                   <div className="flex items-start space-x-4">
-                    <div className="text-2xl">{service.icon}</div>
+                    <div className="text-brand-gold">{service.icon}</div>
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-brand-gold transition-colors">
                         {service.title}

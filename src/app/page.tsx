@@ -301,11 +301,8 @@ export default function HomePage() {
                   {/* Brand Image Container */}
                   <div className="relative mb-6">
                     <div className="aspect-[16/9] relative rounded-xl overflow-hidden bg-white/20 border border-white/30 flex items-center justify-center">
-                      <div className="text-white/60 text-center">
-                        <svg className="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                        <span className="text-sm font-medium">{brand.name}</span>
+                      <div className="text-white/80">
+                        {brand.logo}
                       </div>
                     </div>
                     
@@ -632,32 +629,64 @@ const services = [
 const brands = [
   {
     name: "Cartier",
-    logo: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=200&h=100&q=80",
+    logo: (
+      <svg className="w-full h-20" viewBox="0 0 200 100" fill="currentColor">
+        <text x="100" y="55" textAnchor="middle" className="text-3xl font-light tracking-widest" fill="currentColor">CARTIER</text>
+        <path d="M60 65 h80 M80 70 h40" stroke="currentColor" strokeWidth="0.5"/>
+      </svg>
+    ),
     description: "Luxury French jewelry and eyewear"
   },
   {
     name: "Maybach", 
-    logo: "https://images.unsplash.com/photo-1556306510-1c3e94ba6de8?auto=format&fit=crop&w=200&h=100&q=80",
+    logo: (
+      <svg className="w-full h-20" viewBox="0 0 200 100" fill="currentColor">
+        <circle cx="100" cy="50" r="25" fill="none" stroke="currentColor" strokeWidth="1"/>
+        <text x="100" y="55" textAnchor="middle" className="text-2xl font-bold" fill="currentColor">M</text>
+        <path d="M70 50 L100 30 L130 50" stroke="currentColor" strokeWidth="1" fill="none"/>
+      </svg>
+    ),
     description: "Premium automotive-inspired eyewear"
   },
   {
     name: "Lindberg",
-    logo: "https://images.unsplash.com/photo-1509695507497-903c140c43b0?auto=format&fit=crop&w=200&h=100&q=80",
+    logo: (
+      <svg className="w-full h-20" viewBox="0 0 200 100" fill="currentColor">
+        <text x="100" y="55" textAnchor="middle" className="text-2xl font-extralight tracking-wider" fill="currentColor">LINDBERG</text>
+        <circle cx="50" cy="50" r="3" fill="currentColor"/>
+        <circle cx="150" cy="50" r="3" fill="currentColor"/>
+      </svg>
+    ),
     description: "Minimalist Danish design"
   },
   {
     name: "Kuboraum",
-    logo: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=200&h=100&q=80",
+    logo: (
+      <svg className="w-full h-20" viewBox="0 0 200 100" fill="currentColor">
+        <rect x="70" y="35" width="60" height="30" fill="none" stroke="currentColor" strokeWidth="2"/>
+        <text x="100" y="55" textAnchor="middle" className="text-xl font-bold" fill="currentColor">K</text>
+      </svg>
+    ),
     description: "Contemporary architectural frames"
   },
   {
     name: "Gucci",
-    logo: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=200&h=100&q=80",
+    logo: (
+      <svg className="w-full h-20" viewBox="0 0 200 100" fill="currentColor">
+        <text x="100" y="55" textAnchor="middle" className="text-3xl font-semibold tracking-wide" fill="currentColor">GUCCI</text>
+        <path d="M60 35 h80 M60 65 h80" stroke="currentColor" strokeWidth="1"/>
+      </svg>
+    ),
     description: "Italian luxury fashion house"
   },
   {
     name: "Lumina CRE8",
-    logo: "https://images.unsplash.com/photo-1516914943479-89db7d9ae7f2?auto=format&fit=crop&w=200&h=100&q=80",
+    logo: (
+      <svg className="w-full h-20" viewBox="0 0 200 100" fill="currentColor">
+        <text x="100" y="45" textAnchor="middle" className="text-xl font-light tracking-widest" fill="currentColor">LUMINA</text>
+        <text x="100" y="65" textAnchor="middle" className="text-lg font-bold" fill="currentColor">CRE8</text>
+      </svg>
+    ),
     description: "Innovative eyewear technology"
   }
 ];

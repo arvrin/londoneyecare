@@ -52,8 +52,8 @@ export default function FreakingMindsPage() {
               onClick={() => scrollToSection(item.id)}
               className={`block w-3 h-3 rounded-full m-2 transition-all duration-300 group relative ${
                 activeSection === item.id 
-                  ? 'bg-gradient-to-r from-pink-500 to-purple-600 scale-125' 
-                  : 'bg-gray-300 hover:bg-pink-400'
+                  ? 'bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] scale-125' 
+                  : 'bg-[#757373] hover:bg-[#D2B7C2]'
               }`}
               title={item.label}
             >
@@ -69,7 +69,7 @@ export default function FreakingMindsPage() {
       <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
         {/* Magenta Gradient Background */}
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(135deg, #E91E63 0%, #C2185B 50%, #AD1457 100%)'
+          background: 'linear-gradient(135deg, #8F184C 0%, #D2B7C2 50%, #8F184C 100%)'
         }}>
           {/* Animated Elements */}
           <div className="absolute inset-0 opacity-10">
@@ -79,7 +79,7 @@ export default function FreakingMindsPage() {
           
           {/* Dot Pattern */}
           <div className="absolute inset-0 opacity-20" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.3) 2px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(230,229,229,0.3) 2px, transparent 0)`,
             backgroundSize: '40px 40px'
           }}></div>
         </div>

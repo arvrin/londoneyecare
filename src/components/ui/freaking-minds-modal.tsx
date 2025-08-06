@@ -35,9 +35,9 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
 
   return (
     <div className={`fixed inset-0 z-[100] transition-all duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      {/* Backdrop */}
+      {/* Enhanced Backdrop with Sophisticated Blur */}
       <div 
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        className="absolute inset-0 bg-[#525151]/40 backdrop-blur-md"
         onClick={handleClose}
       />
       
@@ -48,7 +48,8 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
           transition-all duration-300 transform
           ${isVisible ? 'scale-100 translate-y-0' : 'scale-95 translate-y-4'}
         `} style={{
-          background: 'linear-gradient(135deg, #1B365D 0%, #E91E63 15%, #1B365D 85%, #B8860B 100%)'
+          background: 'linear-gradient(135deg, #8F184C 0%, #D2B7C2 50%, #8F184C 100%)',
+          boxShadow: '0 25px 50px -12px rgba(143, 24, 76, 0.25), 0 0 100px rgba(210, 183, 194, 0.15)'
         }}>
           {/* Close Button */}
           <button
@@ -62,8 +63,8 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
 
           {/* Content */}
           <div className="relative">
-            {/* Background overlay for content readability */}
-            <div className="absolute inset-0 bg-white/95 backdrop-blur-sm rounded-3xl"></div>
+            {/* Premium Glass Effect Background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-[#E6E5E5]/98 via-[#E0D8DB]/95 to-[#D2B7C2]/90 backdrop-blur-xl rounded-3xl"></div>
             
             <div className="relative p-8 lg:p-12">
               {/* Header */}
@@ -77,55 +78,55 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
                     className="object-contain mb-4"
                     priority
                   />
-                  <h2 className="text-3xl lg:text-4xl font-display font-bold text-brand-navy mb-4">
+                  <h2 className="text-3xl lg:text-4xl font-display font-bold bg-gradient-to-r from-[#8F184C] to-[#73143D] bg-clip-text text-transparent mb-4">
                     Welcome to the Freaking Minds Experience
                   </h2>
                 </div>
                 
-                <div className="w-32 h-1 bg-gradient-to-r from-pink-500 via-brand-gold to-brand-navy mx-auto mb-6 rounded-full"></div>
+                <div className="w-32 h-1 bg-gradient-to-r from-[#8F184C] via-[#D2B7C2] to-[#8F184C] mx-auto mb-6 rounded-full shadow-lg"></div>
                 
                 <div className="text-lg text-slate-700 leading-relaxed space-y-4 max-w-2xl mx-auto">
                   <p>
-                    Everything you see here — the flow, the feel, the finesse — is built with one goal: <span className="font-semibold text-brand-navy">a better digital experience for you</span>.
+                    Everything you see here — the flow, the feel, the finesse — is built with one goal: <span className="font-semibold text-[#8F184C]">a better digital experience for you</span>.
                   </p>
                   <p>
-                    Designed to help you <span className="font-semibold text-pink-600">see clearer</span>, <span className="font-semibold text-brand-gold">move faster</span>, and <span className="font-semibold text-brand-navy">feel at ease</span> — just like London Eyecare&apos;s promise.
+                    Designed to help you <span className="font-semibold text-[#8F184C]">see clearer</span>, <span className="font-semibold text-[#D2B7C2]">move faster</span>, and <span className="font-semibold text-[#525151]">feel at ease</span> — just like London Eyecare&apos;s promise.
                   </p>
                 </div>
               </div>
 
-              {/* Experience Highlights */}
-              <div className="bg-gradient-to-r from-slate-50 via-pink-50/30 to-blue-50/30 rounded-2xl p-6 border border-slate-200">
+              {/* Premium Experience Highlights with Glass Effect */}
+              <div className="bg-gradient-to-r from-[#E6E5E5]/40 via-[#E0D8DB]/30 to-[#D2B7C2]/20 backdrop-blur-sm rounded-2xl p-6 border border-[#D2B7C2]/30 shadow-xl">
                 <div className="grid md:grid-cols-3 gap-6 text-center">
                   <div className="space-y-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#8F184C] to-[#CA226B] rounded-xl flex items-center justify-center mx-auto shadow-lg">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                       </svg>
                     </div>
-                    <h4 className="font-semibold text-brand-navy">See Clearer</h4>
-                    <p className="text-sm text-slate-600">Intuitive design that guides your vision</p>
+                    <h4 className="font-semibold text-[#525151]">See Clearer</h4>
+                    <p className="text-sm text-[#757373]">Intuitive design that guides your vision</p>
                   </div>
                   
                   <div className="space-y-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-brand-gold to-yellow-500 rounded-xl flex items-center justify-center mx-auto">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#D2B7C2] to-[#DBC5CE] rounded-xl flex items-center justify-center mx-auto shadow-lg">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                     </div>
-                    <h4 className="font-semibold text-brand-navy">Move Faster</h4>
-                    <p className="text-sm text-slate-600">Seamless interactions at lightning speed</p>
+                    <h4 className="font-semibold text-[#525151]">Move Faster</h4>
+                    <p className="text-sm text-[#757373]">Seamless interactions at lightning speed</p>
                   </div>
                   
                   <div className="space-y-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-brand-navy to-blue-600 rounded-xl flex items-center justify-center mx-auto">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#525151] to-[#757373] rounded-xl flex items-center justify-center mx-auto shadow-lg">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                       </svg>
                     </div>
-                    <h4 className="font-semibold text-brand-navy">Feel at Ease</h4>
-                    <p className="text-sm text-slate-600">Comfortable, premium experience</p>
+                    <h4 className="font-semibold text-[#525151]">Feel at Ease</h4>
+                    <p className="text-sm text-[#757373]">Comfortable, premium experience</p>
                   </div>
                 </div>
               </div>
@@ -137,9 +138,9 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
                     onClick={handleClose}
                     className="group relative overflow-hidden"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-brand-gold to-brand-navy rounded-full opacity-90 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#8F184C] via-[#D2B7C2] to-[#8F184C] rounded-full opacity-90 group-hover:opacity-100 transition-all duration-500 shadow-2xl"></div>
                     <div className="relative bg-white rounded-full m-0.5 px-8 py-4 group-hover:bg-transparent transition-all duration-300">
-                      <span className="font-semibold text-brand-navy group-hover:text-white transition-colors duration-300 flex items-center">
+                      <span className="font-semibold text-[#525151] group-hover:text-white transition-colors duration-300 flex items-center">
                         Experience the Difference
                         <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -149,23 +150,23 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
                   </button>
                 </div>
                 
-                <p className="text-sm text-slate-500 mt-4">
+                <p className="text-sm text-[#757373] mt-4 font-light">
                   Continue exploring this premium experience
                 </p>
               </div>
 
-              {/* Footer */}
-              <div className="text-center pt-6 border-t border-slate-200">
-                <p className="text-sm text-slate-500 mb-3">
+              {/* Sophisticated Footer */}
+              <div className="text-center pt-6 border-t border-[#D2B7C2]/30">
+                <p className="text-sm text-[#757373] mb-3 font-light">
                   A showcase of premium web development by Freaking Minds
                 </p>
                 <a
                   href="mailto:hello@freakingminds.com"
-                  className="inline-flex items-center text-sm font-medium text-pink-600 hover:text-brand-navy transition-colors"
+                  className="inline-flex items-center text-sm font-medium text-[#8F184C] hover:text-[#CA226B] transition-all duration-300 group"
                 >
                   Get in touch
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </svg>
                 </a>
               </div>
