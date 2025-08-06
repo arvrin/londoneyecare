@@ -566,6 +566,8 @@ const services = [
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+        <circle cx="12" cy="12" r="1.5" fill="white" opacity="0.8"/>
+        <path d="M4 12h2M18 12h2M12 4v2M12 18v2" stroke="currentColor" strokeWidth="0.5" opacity="0.6"/>
       </svg>
     ),
     href: "/services"
@@ -575,9 +577,12 @@ const services = [
     description: "Curated selection of luxury frames from world-renowned brands including Cartier and Maybach.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M2 7h4l1-2h2L8 7h8l-1-2h2l1 2h4v2h-2l-2 8H4L2 9V7zm3 2l1.5 6h11L19 9H5z"/>
-        <circle cx="7.5" cy="12" r="2.5" fill="none" stroke="currentColor" strokeWidth="1"/>
-        <circle cx="16.5" cy="12" r="2.5" fill="none" stroke="currentColor" strokeWidth="1"/>
+        <path d="M3 7h5l1-1.5h6L16 7h5v1.5h-1l-1.5 9H5.5L4 8.5H3V7z" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+        <ellipse cx="7.5" cy="12" rx="2.5" ry="2" fill="none" stroke="currentColor" strokeWidth="1"/>
+        <ellipse cx="16.5" cy="12" rx="2.5" ry="2" fill="none" stroke="currentColor" strokeWidth="1"/>
+        <path d="M9.5 7h5" stroke="currentColor" strokeWidth="1.5"/>
+        <circle cx="7.5" cy="12" r="0.5" fill="currentColor"/>
+        <circle cx="16.5" cy="12" r="0.5" fill="currentColor"/>
       </svg>
     ),
     href: "/brands"
@@ -587,9 +592,11 @@ const services = [
     description: "Professional fittings, training, and ongoing support for all types of contact lenses.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="2"/>
+        <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" strokeWidth="1.5"/>
         <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" strokeWidth="1"/>
         <circle cx="12" cy="12" r="2" fill="currentColor"/>
+        <path d="M12 4v2M12 18v2M4 12h2M18 12h2" stroke="currentColor" strokeWidth="0.8" opacity="0.5"/>
+        <circle cx="12" cy="12" r="0.8" fill="white" opacity="0.7"/>
       </svg>
     ),
     href: "/services"
@@ -599,7 +606,12 @@ const services = [
     description: "Expert referrals for complex conditions including glaucoma, cataracts, and retinal disorders.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/>
+        <rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M16 2v4M8 2v4" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M3 10h18" stroke="currentColor" strokeWidth="1"/>
+        <circle cx="12" cy="8" r="2" fill="none" stroke="currentColor" strokeWidth="1"/>
+        <path d="M8 16c0-2 1.5-3 4-3s4 1 4 3" fill="none" stroke="currentColor" strokeWidth="1"/>
+        <path d="M17 14l2 2-2 2" stroke="currentColor" strokeWidth="1" opacity="0.7"/>
       </svg>
     ),
     href: "/services"
@@ -609,7 +621,10 @@ const services = [
     description: "Exclusive luxury lounge access for our premium service patients in prestigious Harley Street.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V6H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/>
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        <rect x="4" y="16" width="16" height="6" rx="2" fill="none" stroke="white" strokeWidth="0.8" opacity="0.6"/>
+        <path d="M8 18h8M10 20h4" stroke="white" strokeWidth="0.6" opacity="0.7"/>
+        <circle cx="12" cy="12" r="2" fill="white" opacity="0.5"/>
       </svg>
     ),
     href: "/harley-lounge"
@@ -619,7 +634,11 @@ const services = [
     description: "Same-day appointments available for urgent eye conditions and emergency consultations.",
     icon: (
       <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="1.5"/>
+        <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="1.5" fill="none"/>
+        <circle cx="18" cy="6" r="3" fill="#ef4444"/>
+        <path d="M16.5 5.5l3 3M19.5 5.5l-3 3" stroke="white" strokeWidth="1"/>
+        <circle cx="12" cy="12" r="1" fill="currentColor"/>
       </svg>
     ),
     href: "/contact"
@@ -630,63 +649,108 @@ const brands = [
   {
     name: "Cartier",
     logo: (
-      <svg className="w-full h-20" viewBox="0 0 200 100" fill="currentColor">
-        <text x="100" y="55" textAnchor="middle" className="text-3xl font-light tracking-widest" fill="currentColor">CARTIER</text>
-        <path d="M60 65 h80 M80 70 h40" stroke="currentColor" strokeWidth="0.5"/>
+      <svg className="w-full h-20" viewBox="0 0 200 100" fill="none">
+        {/* Cartier Crown */}
+        <path d="M85 25 L100 15 L115 25 L110 35 L90 35 Z" fill="currentColor" fillOpacity="0.8"/>
+        <path d="M95 35 L105 35 L100 40 Z" fill="currentColor" fillOpacity="0.6"/>
+        {/* Main Text */}
+        <text x="100" y="55" textAnchor="middle" className="text-2xl font-extralight tracking-[0.25em]" fill="currentColor">CARTIER</text>
+        {/* Decorative Elements */}
+        <circle cx="70" cy="25" r="2" fill="currentColor" fillOpacity="0.4"/>
+        <circle cx="130" cy="25" r="2" fill="currentColor" fillOpacity="0.4"/>
+        <path d="M70 65 L130 65" stroke="currentColor" strokeWidth="0.5" opacity="0.6"/>
+        <path d="M80 70 L120 70" stroke="currentColor" strokeWidth="0.3" opacity="0.4"/>
       </svg>
     ),
-    description: "Luxury French jewelry and eyewear"
+    description: "French luxury maison since 1847"
   },
   {
     name: "Maybach", 
     logo: (
-      <svg className="w-full h-20" viewBox="0 0 200 100" fill="currentColor">
-        <circle cx="100" cy="50" r="25" fill="none" stroke="currentColor" strokeWidth="1"/>
-        <text x="100" y="55" textAnchor="middle" className="text-2xl font-bold" fill="currentColor">M</text>
-        <path d="M70 50 L100 30 L130 50" stroke="currentColor" strokeWidth="1" fill="none"/>
+      <svg className="w-full h-20" viewBox="0 0 200 100" fill="none">
+        {/* Maybach Double M Logo */}
+        <circle cx="100" cy="45" r="28" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.8"/>
+        <circle cx="100" cy="45" r="22" fill="none" stroke="currentColor" strokeWidth="0.8" opacity="0.5"/>
+        {/* Double M Design */}
+        <path d="M85 35 L90 50 L95 40 L100 50 L105 40 L110 50 L115 35" 
+              stroke="currentColor" strokeWidth="2" fill="none"/>
+        {/* Brand name */}
+        <text x="100" y="72" textAnchor="middle" className="text-lg font-light tracking-[0.2em]" fill="currentColor">MAYBACH</text>
+        {/* Luxury accent */}
+        <path d="M75 45 L125 45" stroke="currentColor" strokeWidth="0.5" opacity="0.3"/>
       </svg>
     ),
-    description: "Premium automotive-inspired eyewear"
+    description: "Ultra-luxury automotive heritage"
   },
   {
     name: "Lindberg",
     logo: (
-      <svg className="w-full h-20" viewBox="0 0 200 100" fill="currentColor">
-        <text x="100" y="55" textAnchor="middle" className="text-2xl font-extralight tracking-wider" fill="currentColor">LINDBERG</text>
-        <circle cx="50" cy="50" r="3" fill="currentColor"/>
-        <circle cx="150" cy="50" r="3" fill="currentColor"/>
+      <svg className="w-full h-20" viewBox="0 0 200 100" fill="none">
+        {/* Minimalist Lindberg Design */}
+        <text x="100" y="50" textAnchor="middle" className="text-2xl font-extralight tracking-[0.3em]" fill="currentColor">LINDBERG</text>
+        {/* Danish minimalist elements */}
+        <circle cx="40" cy="50" r="1.5" fill="currentColor" opacity="0.7"/>
+        <circle cx="160" cy="50" r="1.5" fill="currentColor" opacity="0.7"/>
+        <path d="M45 50 L155 50" stroke="currentColor" strokeWidth="0.3" opacity="0.4"/>
+        {/* Subtle frame illustration */}
+        <ellipse cx="70" cy="50" rx="8" ry="5" fill="none" stroke="currentColor" strokeWidth="0.5" opacity="0.5"/>
+        <ellipse cx="130" cy="50" rx="8" ry="5" fill="none" stroke="currentColor" strokeWidth="0.5" opacity="0.5"/>
+        <path d="M78 50 L122 50" stroke="currentColor" strokeWidth="0.5" opacity="0.5"/>
       </svg>
     ),
-    description: "Minimalist Danish design"
+    description: "Scandinavian minimalism & innovation"
   },
   {
-    name: "Kuboraum",
+    name: "Tom Ford",
     logo: (
-      <svg className="w-full h-20" viewBox="0 0 200 100" fill="currentColor">
-        <rect x="70" y="35" width="60" height="30" fill="none" stroke="currentColor" strokeWidth="2"/>
-        <text x="100" y="55" textAnchor="middle" className="text-xl font-bold" fill="currentColor">K</text>
+      <svg className="w-full h-20" viewBox="0 0 200 100" fill="none">
+        {/* Tom Ford Sophisticated Logo */}
+        <rect x="60" y="25" width="80" height="50" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.6"/>
+        <rect x="65" y="30" width="70" height="40" fill="none" stroke="currentColor" strokeWidth="0.5" opacity="0.4"/>
+        {/* TF Monogram */}
+        <text x="85" y="52" textAnchor="middle" className="text-3xl font-bold" fill="currentColor">T</text>
+        <text x="115" y="52" textAnchor="middle" className="text-3xl font-bold" fill="currentColor">F</text>
+        {/* Brand name */}
+        <text x="100" y="88" textAnchor="middle" className="text-sm font-light tracking-[0.15em]" fill="currentColor">TOM FORD</text>
       </svg>
     ),
-    description: "Contemporary architectural frames"
+    description: "Contemporary luxury & sophistication"
+  },
+  {
+    name: "Oliver Peoples",
+    logo: (
+      <svg className="w-full h-20" viewBox="0 0 200 100" fill="none">
+        {/* Oliver Peoples Vintage-inspired Logo */}
+        <text x="100" y="42" textAnchor="middle" className="text-lg font-light tracking-[0.1em]" fill="currentColor">OLIVER</text>
+        <text x="100" y="60" textAnchor="middle" className="text-lg font-light tracking-[0.1em]" fill="currentColor">PEOPLES</text>
+        {/* Vintage frame elements */}
+        <ellipse cx="75" cy="35" rx="12" ry="8" fill="none" stroke="currentColor" strokeWidth="0.8" opacity="0.6"/>
+        <ellipse cx="125" cy="35" rx="12" ry="8" fill="none" stroke="currentColor" strokeWidth="0.8" opacity="0.6"/>
+        <path d="M87 35 L113 35" stroke="currentColor" strokeWidth="0.8" opacity="0.6"/>
+        {/* Decorative elements */}
+        <path d="M60 70 L140 70" stroke="currentColor" strokeWidth="0.5" opacity="0.4"/>
+        <circle cx="55" cy="70" r="1" fill="currentColor" opacity="0.5"/>
+        <circle cx="145" cy="70" r="1" fill="currentColor" opacity="0.5"/>
+      </svg>
+    ),
+    description: "American craftsmanship & vintage style"
   },
   {
     name: "Gucci",
     logo: (
-      <svg className="w-full h-20" viewBox="0 0 200 100" fill="currentColor">
-        <text x="100" y="55" textAnchor="middle" className="text-3xl font-semibold tracking-wide" fill="currentColor">GUCCI</text>
-        <path d="M60 35 h80 M60 65 h80" stroke="currentColor" strokeWidth="1"/>
+      <svg className="w-full h-20" viewBox="0 0 200 100" fill="none">
+        {/* Gucci Luxury Logo */}
+        <circle cx="100" cy="35" r="15" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.7"/>
+        <text x="100" y="40" textAnchor="middle" className="text-2xl font-bold" fill="currentColor">G</text>
+        {/* Brand name */}
+        <text x="100" y="62" textAnchor="middle" className="text-2xl font-semibold tracking-[0.15em]" fill="currentColor">GUCCI</text>
+        {/* Luxury accents */}
+        <path d="M70 70 L130 70" stroke="currentColor" strokeWidth="1" opacity="0.6"/>
+        <path d="M75 75 L125 75" stroke="currentColor" strokeWidth="0.5" opacity="0.4"/>
+        {/* Italian heritage elements */}
+        <path d="M85 35 Q100 25 115 35" stroke="currentColor" strokeWidth="0.8" fill="none" opacity="0.5"/>
       </svg>
     ),
-    description: "Italian luxury fashion house"
-  },
-  {
-    name: "Lumina CRE8",
-    logo: (
-      <svg className="w-full h-20" viewBox="0 0 200 100" fill="currentColor">
-        <text x="100" y="45" textAnchor="middle" className="text-xl font-light tracking-widest" fill="currentColor">LUMINA</text>
-        <text x="100" y="65" textAnchor="middle" className="text-lg font-bold" fill="currentColor">CRE8</text>
-      </svg>
-    ),
-    description: "Innovative eyewear technology"
+    description: "Italian luxury fashion heritage"
   }
 ];
