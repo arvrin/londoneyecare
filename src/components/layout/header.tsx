@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Logo, LogoMark } from '@/components/ui/logo';
+import { Logo } from '@/components/ui/logo';
 
 interface DropdownItem {
   name: string;
@@ -87,9 +87,9 @@ export function Header() {
                 <div className="hidden sm:block">
                   <Logo width={180} height={50} showText={true} className="group-hover:scale-105 transition-all duration-300 filter group-hover:brightness-110" />
                 </div>
-                {/* Mobile Logo */}
+                {/* Mobile Logo - Increased Size */}
                 <div className="sm:hidden">
-                  <LogoMark size={40} className="group-hover:scale-105 transition-all duration-300 filter group-hover:brightness-110" />
+                  <Logo width={140} height={40} className="group-hover:scale-105 transition-all duration-300 filter group-hover:brightness-110" />
                 </div>
               </div>
               {/* Subtle glow effect on hover */}

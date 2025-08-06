@@ -108,29 +108,29 @@ export default function FreakingMindsPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="text-center lg:text-left">
-              {/* Logo */}
-              <div className="mb-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="text-center lg:text-left order-2 lg:order-1">
+              {/* Logo - Mobile Optimized */}
+              <div className="mb-6 sm:mb-8">
                 <Image
                   src="/FM logo.png"
                   alt="Freaking Minds"
-                  width={280}
-                  height={100}
-                  className="object-contain filter brightness-0 invert mx-auto lg:mx-0"
+                  width={240}
+                  height={85}
+                  className="object-contain filter brightness-0 invert mx-auto lg:mx-0 w-auto h-16 sm:h-20 lg:h-auto"
                   priority
                 />
               </div>
               
-              <h1 className="text-5xl lg:text-7xl font-display font-bold text-white mb-8 leading-[1.1] tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-bold text-white mb-6 sm:mb-8 leading-[1.1] tracking-tight">
                 We don&apos;t just build websites.
                 <span className="block text-white/95 font-black bg-gradient-to-r from-white to-white/90 bg-clip-text text-transparent">
                   We craft digital experiences.
                 </span>
               </h1>
               
-              <p className="text-xl text-white/85 mb-10 max-w-2xl leading-relaxed font-medium">
+              <p className="text-base sm:text-lg lg:text-xl text-white/85 mb-8 sm:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium px-4 sm:px-0">
                 See how we transformed London Eyecare from basic to brilliant — and discover what we could create for your brand.
               </p>
               
@@ -149,49 +149,51 @@ export default function FreakingMindsPage() {
                 </button>
                 
                 <Link 
-                  href="mailto:hello@freakingminds.com"
+                  href="https://wa.me/919833257659?text=Hi! I'm interested in learning more about your digital services after seeing the London Eyecare website transformation."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group px-12 py-5 text-lg bg-white/5 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/15 hover:border-white/50 rounded-full transition-all duration-500 shadow-lg hover:shadow-xl relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <span className="relative z-10 font-medium">Get In Touch</span>
+                  <span className="relative z-10 font-medium">WhatsApp Us</span>
                 </Link>
               </div>
             </div>
             
-            {/* Visual Showcase */}
-            <div className="relative">
-              <div className="bg-white/5 backdrop-blur-lg rounded-3xl p-10 border border-white/20 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] relative overflow-hidden">
+            {/* Visual Showcase - Mobile Optimized */}
+            <div className="relative order-1 lg:order-2 mb-8 lg:mb-0">
+              <div className="bg-white/5 backdrop-blur-lg rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/20 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] relative overflow-hidden mx-4 sm:mx-0">
                 {/* Subtle internal gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-[#8F184C]/10 rounded-3xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-[#8F184C]/10 rounded-2xl sm:rounded-3xl"></div>
                 
-                <div className="relative z-10 space-y-8">
-                  <div className="flex items-center space-x-5 group">
-                    <div className="w-14 h-14 bg-gradient-to-br from-white/30 to-white/10 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 border border-white/20">
-                      <svg className="w-7 h-7 text-white drop-shadow-sm" viewBox="0 0 24 24" fill="currentColor">
+                <div className="relative z-10 space-y-6 sm:space-y-8">
+                  <div className="flex items-center space-x-4 sm:space-x-5 group">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-white/30 to-white/10 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 border border-white/20 flex-shrink-0">
+                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-white drop-shadow-sm" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-bold text-lg drop-shadow-sm">Premium Design</h3>
-                      <p className="text-white/80 text-sm font-medium">Harley Street level quality</p>
+                      <h3 className="text-white font-bold text-base sm:text-lg drop-shadow-sm">Premium Design</h3>
+                      <p className="text-white/80 text-xs sm:text-sm font-medium">Harley Street level quality</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-5 group">
-                    <div className="w-14 h-14 bg-gradient-to-br from-white/30 to-white/10 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 border border-white/20">
-                      <svg className="w-7 h-7 text-white drop-shadow-sm" viewBox="0 0 24 24" fill="currentColor">
+                  <div className="flex items-center space-x-4 sm:space-x-5 group">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-white/30 to-white/10 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 border border-white/20 flex-shrink-0">
+                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-white drop-shadow-sm" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-bold text-lg drop-shadow-sm">Lightning Fast</h3>
-                      <p className="text-white/80 text-sm font-medium">Optimized performance</p>
+                      <h3 className="text-white font-bold text-base sm:text-lg drop-shadow-sm">Lightning Fast</h3>
+                      <p className="text-white/80 text-xs sm:text-sm font-medium">Optimized performance</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-5 group">
-                    <div className="w-14 h-14 bg-gradient-to-br from-white/30 to-white/10 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 border border-white/20">
-                      <svg className="w-7 h-7 text-white drop-shadow-sm" viewBox="0 0 24 24" fill="currentColor">
+                  <div className="flex items-center space-x-4 sm:space-x-5 group">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-white/30 to-white/10 rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 border border-white/20 flex-shrink-0">
+                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-white drop-shadow-sm" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
                         <circle cx="12" cy="12" r="5"/>
                         <circle cx="12" cy="12" r="3" fill="white" opacity="0.8"/>
@@ -199,8 +201,8 @@ export default function FreakingMindsPage() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-white font-bold text-lg drop-shadow-sm">Conversion Focused</h3>
-                      <p className="text-white/80 text-sm font-medium">Built to drive results</p>
+                      <h3 className="text-white font-bold text-base sm:text-lg drop-shadow-sm">Conversion Focused</h3>
+                      <p className="text-white/80 text-xs sm:text-sm font-medium">Built to drive results</p>
                     </div>
                   </div>
                 </div>
@@ -403,12 +405,14 @@ export default function FreakingMindsPage() {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <button 
-              onClick={() => scrollToSection('about')}
-              className="bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] text-white hover:from-[#CA226B] hover:to-[#DBC5CE] px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            <Link 
+              href="https://wa.me/919833257659?text=I'm curious about what digital transformation you could create for my brand after seeing the London Eyecare website."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] text-white hover:from-[#CA226B] hover:to-[#DBC5CE] px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Curious what we&apos;d do for your brand? →
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -484,12 +488,14 @@ export default function FreakingMindsPage() {
 
           {/* CTA */}
           <div className="text-center mt-12">
-            <button 
-              onClick={() => scrollToSection('pricing')}
-              className="bg-white text-[#8F184C] hover:bg-[#E0D8DB] px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            <Link 
+              href="https://wa.me/919833257659?text=Let's discuss building something memorable for my brand! I'd love to explore your services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-[#8F184C] hover:bg-[#E0D8DB] px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Let&apos;s build something memorable →
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -537,60 +543,60 @@ export default function FreakingMindsPage() {
                 summary: 'Dominate London search results',
                 details: 'Technical SEO audit, local SEO optimization, keyword strategy, competitor analysis, monthly reporting',
                 ukPrice: '£1,200-2,500',
-                ourPrice: '£450-750',
+                ourPrice: '£250-400',
                 monthlyPrice: '/month',
                 popular: true,
-                savings: 'Save 60-70%'
+                savings: 'Starting from'
               },
               {
                 service: 'Digital Marketing Suite',
                 summary: 'Complete online presence management',
                 details: 'Google Ads management, social media strategy, content marketing, email campaigns, conversion optimization',
                 ukPrice: '£2,000-4,000',
-                ourPrice: '£800-1,500',
+                ourPrice: '£400-800',
                 monthlyPrice: '/month',
                 popular: true,
-                savings: 'Save 60-65%'
+                savings: 'Starting from'
               },
               {
                 service: 'Brand & Web Development',
                 summary: 'Premium digital experiences',
                 details: 'Custom website design, brand identity, logo design, premium hosting, maintenance & support',
                 ukPrice: '£8,000-15,000',
-                ourPrice: '£3,000-6,000',
+                ourPrice: '£1,500-3,500',
                 monthlyPrice: 'project',
                 popular: false,
-                savings: 'Save 60-70%'
+                savings: 'Starting from'
               },
               {
                 service: 'Social Media Management',
                 summary: 'Build trust & patient relationships',
                 details: 'Content creation, posting schedule, community engagement, Instagram/Facebook management, growth strategy',
                 ukPrice: '£800-1,500',
-                ourPrice: '£300-600',
+                ourPrice: '£150-350',
                 monthlyPrice: '/month',
                 popular: false,
-                savings: 'Save 60-65%'
+                savings: 'Starting from'
               },
               {
                 service: 'E-commerce & Booking Systems',
                 summary: 'Convert visitors to appointments',
                 details: 'Online booking integration, payment systems, CRM setup, automated workflows, conversion tracking',
                 ukPrice: '£3,000-6,000',
-                ourPrice: '£1,200-2,500',
+                ourPrice: '£800-1,800',
                 monthlyPrice: 'project',
                 popular: false,
-                savings: 'Save 60-65%'
+                savings: 'Starting from'
               },
               {
                 service: 'Complete Partnership Package',
                 summary: 'Your full digital team in India',
                 details: 'SEO, digital marketing, web development, social media, content creation, monthly strategy calls',
                 ukPrice: '£5,000-10,000',
-                ourPrice: '£2,000-4,000',
+                ourPrice: '£1,200-2,500',
                 monthlyPrice: '/month',
                 popular: true,
-                savings: 'Save 60-70%'
+                savings: 'Starting from'
               }
             ].map((item, index) => (
               <div key={index} className={`group relative ${item.popular ? 'md:col-span-2 xl:col-span-1' : ''}`}>
@@ -635,7 +641,9 @@ export default function FreakingMindsPage() {
                     {/* Fixed Position Button */}
                     <div className="mt-auto">
                       <Link 
-                        href="mailto:hello@freakingminds.com"
+                        href={`https://wa.me/919833257659?text=Hi! I'm interested in the ${item.service} package. Can we discuss how this partnership could work for my business?`}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className={`w-full py-4 px-6 rounded-full font-semibold transition-all duration-300 block text-center transform hover:scale-105 ${
                           item.popular
                             ? 'bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] text-white hover:from-[#CA226B] hover:to-[#DBC5CE] shadow-lg hover:shadow-xl'
@@ -649,6 +657,38 @@ export default function FreakingMindsPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Pricing Disclaimer */}
+          <div className="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border-l-4 border-blue-400">
+            <div className="flex items-start">
+              <div className="flex-shrink-0">
+                <svg className="w-6 h-6 text-blue-400 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h4 className="text-lg font-semibold text-blue-800 mb-2">
+                  💡 Important Pricing Information
+                </h4>
+                <div className="text-blue-700 space-y-2 text-sm leading-relaxed">
+                  <p>
+                    <strong>These are indicative starting rates</strong> to give you a baseline understanding of our pricing approach.
+                  </p>
+                  <p>
+                    <strong>Final pricing will be customized</strong> based on your specific requirements, project scope, timeline, and business objectives after our detailed consultation.
+                  </p>
+                  <p>
+                    <strong>Transparent Process:</strong> We&apos;ll provide a detailed proposal with exact costs, deliverables, and timelines once we understand your unique needs.
+                  </p>
+                </div>
+                <div className="mt-4 p-3 bg-white/70 rounded-lg border border-blue-200">
+                  <p className="text-blue-800 font-medium text-sm text-center">
+                    💬 Ready to discuss your project? Let&apos;s chat about your specific requirements and get you a personalized quote!
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Strategic Partnership CTA */}
@@ -665,16 +705,20 @@ export default function FreakingMindsPage() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
-                  href="mailto:hello@freakingminds.com"
+                  href="https://wa.me/919833257659?text=I'd like to discuss a strategic partnership for my business. Can we schedule a consultation to explore the possibilities?"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-gradient-to-r from-[#8F184C] to-[#D2B7C2] text-white hover:from-[#CA226B] hover:to-[#DBC5CE] px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   Discuss Partnership
                 </Link>
                 <Link 
-                  href="tel:+918800000000"
+                  href="https://wa.me/919833257659?text=I'd like to schedule a strategy call to discuss how we can work together on digital marketing and growth."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-white/80 text-[#8F184C] hover:bg-white border-2 border-[#D2B7C2]/50 px-8 py-4 font-semibold rounded-full transition-all duration-300"
                 >
-                  Schedule Strategy Call
+                  WhatsApp Strategy Chat
                 </Link>
               </div>
             </div>
@@ -790,16 +834,20 @@ export default function FreakingMindsPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="mailto:hello@freakingminds.com"
+                href="https://wa.me/919833257659?text=After seeing the London Eyecare transformation, I'm ready to discuss a strategic partnership for my business. Let's explore the possibilities!"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white text-[#8F184C] hover:bg-[#E0D8DB] px-10 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center"
               >
                 Discuss Partnership Strategy →
               </Link>
               <Link 
-                href="tel:+918800000000"
+                href="https://wa.me/919833257659?text=I'm interested in scheduling a strategy call to explore how we can work together on growing my business digitally."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-white/10 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/20 hover:border-white/60 px-10 py-4 font-semibold rounded-full transition-all duration-300 flex items-center justify-center"
               >
-                Schedule Strategy Call
+                WhatsApp Strategy Call
               </Link>
             </div>
           </div>
@@ -811,8 +859,8 @@ export default function FreakingMindsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-400 mb-4">A showcase of premium web development</p>
           <div className="flex justify-center space-x-8">
-            <Link href="mailto:hello@freakingminds.com" className="text-[#D2B7C2] hover:text-white transition-colors">
-              hello@freakingminds.com
+            <Link href="https://wa.me/919833257659?text=Hi! I found your contact through the London Eyecare website showcase." target="_blank" rel="noopener noreferrer" className="text-[#D2B7C2] hover:text-white transition-colors">
+              WhatsApp: +91 98332 57659
             </Link>
             <Link href="/" className="text-gray-400 hover:text-white transition-colors">
               ← Back to London Eyecare
