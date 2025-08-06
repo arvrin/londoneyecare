@@ -41,15 +41,17 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
         onClick={handleClose}
       />
       
-      {/* Responsive Modal */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen p-2 sm:p-4 lg:p-8">
+      {/* Responsive Modal - Fixed for All Screen Sizes */}
+      <div className="relative z-10 flex items-center justify-center min-h-screen p-2 sm:p-4 lg:p-6 xl:p-8">
         <div className={`
-          relative w-full max-w-[95vw] sm:max-w-2xl lg:max-w-3xl xl:max-w-4xl backdrop-blur-xl rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden
+          relative w-full max-w-[95vw] sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl 
+          backdrop-blur-xl rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden
           transition-all duration-300 transform
           ${isVisible ? 'scale-100 translate-y-0' : 'scale-95 translate-y-4'}
         `} style={{
           background: 'linear-gradient(135deg, #8F184C 0%, #D2B7C2 50%, #8F184C 100%)',
-          boxShadow: '0 25px 50px -12px rgba(143, 24, 76, 0.25), 0 0 100px rgba(210, 183, 194, 0.15)'
+          boxShadow: '0 25px 50px -12px rgba(143, 24, 76, 0.25), 0 0 100px rgba(210, 183, 194, 0.15)',
+          maxHeight: '90vh'
         }}>
           {/* Close Button */}
           <button
@@ -66,7 +68,7 @@ export function FreakingMindsModal({ isOpen, onClose }: FreakingMindsModalProps)
             {/* Premium Glass Effect Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#E6E5E5]/98 via-[#E0D8DB]/95 to-[#D2B7C2]/90 backdrop-blur-xl rounded-3xl"></div>
             
-            <div className="relative p-4 sm:p-8 lg:p-12 xl:p-16">
+            <div className="relative p-4 sm:p-8 lg:p-12 xl:p-16 max-h-[75vh] overflow-y-auto">
               {/* Header with Better Spacing */}
               <div className="text-center mb-12">
                 <div className="flex flex-col items-center justify-center mb-6">
@@ -182,12 +184,16 @@ export function useFreakingMindsModal() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Show modal every time after 5 seconds (removed localStorage check)
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 5000); // Show after 5 seconds
+    // Show modal only once per session with longer delay
+    const hasSeenModal = sessionStorage.getItem('freaking-minds-modal-seen');
+    if (!hasSeenModal) {
+      const timer = setTimeout(() => {
+        setIsOpen(true);
+        sessionStorage.setItem('freaking-minds-modal-seen', 'true');
+      }, 15000); // Show after 15 seconds, only once per session
 
-    return () => clearTimeout(timer);
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const close = () => setIsOpen(false);
