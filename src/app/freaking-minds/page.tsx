@@ -257,23 +257,23 @@ export default function FreakingMindsPage() {
                   target="_blank"
                   className="group block bg-white rounded-2xl p-4 border border-red-200 mb-6 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
                 >
-                  <div className="aspect-video bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl relative group-hover:scale-[1.02] transition-transform duration-300 border border-gray-200">
-                    {/* Screenshot placeholder with description */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
-                      <div className="w-full max-w-sm mx-auto text-center space-y-3">
-                        <div className="text-xs text-gray-500 font-medium uppercase tracking-wide">Original Website Design</div>
-                        <div className="space-y-2 text-left">
-                          <div className="text-sm text-gray-600">• Basic Wix template structure</div>
-                          <div className="text-sm text-gray-600">• Simple navigation (Home, Collections, Booking)</div>
-                          <div className="text-sm text-gray-600">• Large hero image with gold text overlay</div>
-                          <div className="text-sm text-gray-600">• Limited mobile optimization</div>
-                          <div className="text-sm text-gray-600">• Minimal interactive elements</div>
-                        </div>
-                        <div className="pt-2">
-                          <span className="inline-flex items-center px-3 py-1 bg-red-100 text-red-700 text-xs font-medium rounded-full">
-                            Visit Live Site →
-                          </span>
-                        </div>
+                  <div className="aspect-video rounded-xl relative group-hover:scale-[1.02] transition-transform duration-300 border border-gray-200 overflow-hidden">
+                    <Image
+                      src="/oldweb.png"
+                      alt="Original London Eyecare Website"
+                      fill
+                      className="object-cover object-top"
+                      priority
+                    />
+                    {/* Overlay for click indication */}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                        <span className="text-sm font-semibold text-gray-800 flex items-center">
+                          Visit Original Site
+                          <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -327,28 +327,28 @@ export default function FreakingMindsPage() {
                   target="_blank"
                   className="group block bg-white rounded-2xl p-4 border border-emerald-200 mb-6 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
                 >
-                  <div className="aspect-video bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-xl relative group-hover:scale-[1.02] transition-transform duration-300 border border-indigo-200">
-                    {/* Premium website features */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
-                      <div className="w-full max-w-sm mx-auto text-center space-y-3">
-                        <div className="text-xs text-indigo-600 font-semibold uppercase tracking-wide">Premium Redesigned Experience</div>
-                        <div className="space-y-2 text-left">
-                          <div className="text-sm text-gray-700">• Custom Next.js architecture with premium design</div>
-                          <div className="text-sm text-gray-700">• Advanced navigation with luxury dropdown menus</div>
-                          <div className="text-sm text-gray-700">• Responsive hero with professional imagery</div>
-                          <div className="text-sm text-gray-700">• Mobile-first responsive across all devices</div>
-                          <div className="text-sm text-gray-700">• Conversion-optimized user experience</div>
-                        </div>
-                        <div className="pt-2">
-                          <span className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-700 text-xs font-semibold rounded-full">
-                            Experience Premium Site →
-                          </span>
-                        </div>
+                  <div className="aspect-video rounded-xl relative group-hover:scale-[1.02] transition-transform duration-300 border border-emerald-200 overflow-hidden">
+                    <Image
+                      src="/redesignedweb.png"
+                      alt="Redesigned London Eyecare Website"
+                      fill
+                      className="object-cover object-top"
+                      priority
+                    />
+                    {/* Overlay for click indication */}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-emerald-500/10 transition-colors duration-300 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-emerald-200">
+                        <span className="text-sm font-semibold text-emerald-800 flex items-center">
+                          Experience Premium Site
+                          <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </span>
                       </div>
                     </div>
                   </div>
                   <div className="text-center mt-3">
-                    <span className="text-sm text-indigo-600 font-semibold">londoneyecare.vercel.app</span>
+                    <span className="text-sm text-emerald-600 font-semibold">londoneyecare.vercel.app</span>
                   </div>
                 </Link>
                 
